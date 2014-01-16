@@ -3,12 +3,10 @@ using System.Collections;
 
 public class TriggerLights : MonoBehaviour {
 	
-	bool isOn;
 	public Light targetLight;
 	
 	// Use this for initialization
 	void Start () {
-		isOn = false;
 	}
 	
 	void OnTriggerStay(Collider other) {
@@ -28,17 +26,15 @@ public class TriggerLights : MonoBehaviour {
 	}
 	
 	void turnOnLights(){
-		if(!isOn){
+		if(!targetLight.enabled){
 			//GameObject point_light_left = GameObject.Find("point_light_left");
 			//point_light_left.light.enabled = true;
 			targetLight.enabled = true;
-			isOn = true;
 		}
 		else {
 			//GameObject point_light_left = GameObject.Find("point_light_left");
 			//point_light_left.light.enabled = false;
 			targetLight.enabled = false;
-			isOn = false;
 		}
 	}
 }

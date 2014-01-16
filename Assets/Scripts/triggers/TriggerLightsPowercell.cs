@@ -3,12 +3,10 @@ using System.Collections;
 
 public class TriggerLightsPowercell : MonoBehaviour {
 	
-	public bool isOn;
 	public Light targetLight;
 	
 	// Use this for initialization
 	void Start () {
-		isOn = false;
 	}
 	
 	void OnTriggerEnter(Collider other) {
@@ -17,7 +15,6 @@ public class TriggerLightsPowercell : MonoBehaviour {
 		{
 			//print ("power cell on pedastel");
 			turnOnLights();
-			isOn = true;
 		}
 	}
 	
@@ -26,12 +23,11 @@ public class TriggerLightsPowercell : MonoBehaviour {
 		{
 			//print ("power cell taken off of pedastel");
 			turnOnLights();
-			isOn = false;
 		}
 	}
 	
 	void turnOnLights(){
-		if(!isOn){
+		if(!targetLight.enabled){
 			targetLight.enabled = true;
 		}
 		else {
