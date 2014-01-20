@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player Scripts/playerActions.cs">
+    <Files>
+      <File FileName="Assets/Scripts/heldObjectProperties.cs" Line="10" Column="17" />
+      <File FileName="Assets/Scripts/Player Scripts/playerActions.cs" Line="5" Column="2" />
+      <File FileName="Assets/Scripts/triggers/TriggerLightsPowercell.cs" Line="17" Column="19" />
+      <File FileName="Assets/Scripts/triggers/TriggerLights.cs" Line="10" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
