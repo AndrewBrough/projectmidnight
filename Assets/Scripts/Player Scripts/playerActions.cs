@@ -22,7 +22,8 @@ public class playerActions : MonoBehaviour {
 			{
 				newPos.y -= 0.5f;
 			}
-			heldObject.transform.position = newPos;
+			Vector3 moveToPos = Vector3.MoveTowards(heldObject.transform.position, newPos, 0.5f);
+			heldObject.transform.position = moveToPos;
 			heldObject.transform.rotation = this.transform.rotation;
 		}
 		
