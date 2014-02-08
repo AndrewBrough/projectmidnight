@@ -40,9 +40,9 @@ public class playerActions : MonoBehaviour {
 				Camera mainCamera = transform.Find("Main Camera").camera;
 				RaycastHit hit = new RaycastHit();
 				Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit);
-
 				if(hit.collider != null){
-					GameObject hitObject = GameObject.Find( hit.collider.gameObject.name ).transform.gameObject;
+					GameObject hitObject = GameObject.Find( hit.collider.gameObject.name ).transform.parent.gameObject;
+					print("Hit " + hitObject.name);
 					heldObjectProperties hitObjectProp = (heldObjectProperties) hitObject.GetComponent(typeof(heldObjectProperties));
 					heldObject = (hitObject.tag == "powerCell" || hitObject.tag == "lantern" && hitObjectProp.DtoPlayer <= 3) ? hitObject : null;
 					if(heldObject != null){
