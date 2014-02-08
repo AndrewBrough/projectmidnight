@@ -1,22 +1,14 @@
 fileFormatVersion: 2
-guid: 8f6b2c8f67efa4ea3b4c355ec321c75d
+guid: 629d621081a300c4da7120d0e62f12de
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: polySurface2
-    100002: Single_Door:door:wall:polySurface2
-    100004: Single_Door:polySurface3
-    100006: //RootNode
-    400000: polySurface2
-    400002: Single_Door:door:wall:polySurface2
-    400004: Single_Door:polySurface3
-    400006: //RootNode
-    2300000: polySurface2
-    2300002: Single_Door:door:wall:polySurface2
-    3300000: polySurface2
-    3300002: Single_Door:door:wall:polySurface2
-    4300000: polySurface2
-    4300002: Single_Door:door:wall:polySurface2
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: polySurface1042
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -36,7 +28,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

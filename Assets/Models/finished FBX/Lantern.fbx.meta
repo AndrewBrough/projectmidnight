@@ -14,9 +14,11 @@ ModelImporter:
     2300000: pCylinder1
     2300002: pCylinder2
     2300004: pCylinder3
+    2300006: //RootNode
     3300000: pCylinder1
     3300002: pCylinder2
     3300004: pCylinder3
+    3300006: //RootNode
     4300000: pCylinder1
     4300002: pCylinder2
     4300004: pCylinder3
