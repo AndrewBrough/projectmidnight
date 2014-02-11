@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NPC Scripts\EnemySight.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player Scripts\playerActions.cs">
     <Files>
-      <File FileName="Assets\Scripts\NPC Scripts\EnemySight.cs" Line="18" Column="37" />
+      <File FileName="projectmidnight.sln" Line="51" Column="8" />
+      <File FileName="Assets\Scripts\NPC Scripts\EnemySight.cs" Line="19" Column="3" />
+      <File FileName="Assets\Scripts\triggers\TriggerLights.cs" Line="17" Column="41" />
+      <File FileName="Assets\Scripts\Player Scripts\playerActions.cs" Line="61" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

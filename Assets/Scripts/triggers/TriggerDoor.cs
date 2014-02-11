@@ -1,3 +1,4 @@
+/** Script attached to trigger that Player activates to open door **/
 using UnityEngine;
 using System.Collections;
 

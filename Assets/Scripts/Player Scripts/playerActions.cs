@@ -6,9 +6,12 @@ public class playerActions : MonoBehaviour {
 	
 	public GameObject heldObject;
 	public heldObjectProperties heldObjectProp;
+
+	private GameObject monster;
 	
 	// Use this for initialization
 	void Start () {
+		monster = GameObject.FindGameObjectWithTag ("Monster");
 	}
 	
 	// Update is called once per frame
@@ -54,6 +57,8 @@ public class playerActions : MonoBehaviour {
 			}
 		}
 	}
-	
-	//TEST STUFF FOR EVA
+
+	//Check player field of view
+	//return game object if it exists, otherwise return null
+
 }
