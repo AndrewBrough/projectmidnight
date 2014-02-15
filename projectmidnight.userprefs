@@ -1,14 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level Scripts\Level 1\IIIA_Trigger.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\triggers\TriggerDoorPowerCell.cs">
     <Files>
-      <File FileName="projectmidnight.sln" Line="51" Column="10" />
+      <File FileName="projectmidnight.sln" Line="52" Column="1" />
       <File FileName="Assets\Scripts\NPC Scripts\EnemySight.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\triggers\TriggerLights.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs" Line="27" Column="18" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs" Line="20" Column="17" />
       <File FileName="Assets\Scripts\Level Scripts\Level 1\IIB_Trigger.cs" Line="12" Column="56" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIIA_Trigger.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\triggers\TriggerDoor.cs" Line="42" Column="4" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIIA_Trigger.cs" Line="15" Column="3" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIIB_Trigger.cs" Line="12" Column="1" />
+      <File FileName="Assets\Scripts\ObjectScripts\heldObjectProperties.cs" Line="21" Column="56" />
+      <File FileName="Assets\Scripts\triggers\TriggerDoorPowerCell.cs" Line="18" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

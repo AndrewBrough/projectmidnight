@@ -36,7 +36,7 @@ public class IIA_Trigger : MonoBehaviour {
 						//this section is messy and I'm aware of it, basically, delete the instance of the monster
 						//then disable the trigger
 						UnityEngine.Object.DestroyObject (monster);
-						this.enabled = false;
+						UnityEngine.Object.DestroyObject (transform.collider);
 				}
 	}
 

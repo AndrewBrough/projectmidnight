@@ -12,6 +12,7 @@ public class IIIA_Trigger : MonoBehaviour {
 		//remove collider
 		doorBoxCollider.enabled = true;
 		//disable trigger
-		this.enabled = false;
+		UnityEngine.Object.DestroyObject (transform.collider);
+		//transform.collider.isTrigger = false;
 	}
 }

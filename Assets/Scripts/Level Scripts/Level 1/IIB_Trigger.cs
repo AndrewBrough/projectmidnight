@@ -20,9 +20,9 @@ public class IIB_Trigger : MonoBehaviour {
 				monster.transform.Translate (0, 0, Time.deltaTime * 8, Space.World);
 		else {
 			//this section is messy and I'm aware of it, basically, delete the instance of the monster
-			//then disable the trigger
+			//then destroy the trigger
 			UnityEngine.Object.DestroyObject (monster);
-			this.enabled = false;
+			UnityEngine.Object.DestroyObject (transform.collider);
 		}
 	}
 
