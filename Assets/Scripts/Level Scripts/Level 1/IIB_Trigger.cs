@@ -15,7 +15,7 @@ public class IIB_Trigger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (monster_triggered)
+		if (monster_triggered && monster != null)
 			if (26 > monster.transform.position.z)
 				monster.transform.Translate (0, 0, Time.deltaTime * 8, Space.World);
 		else {

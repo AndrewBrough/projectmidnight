@@ -52,6 +52,8 @@
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\IIB_Trigger.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\IIIA_Trigger.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\IIIB_Trigger.cs" />
+     <Compile Include="Assets\Scripts\Level Scripts\Level 1\II_Trigger.cs" />
+     <Compile Include="Assets\Scripts\Level Scripts\Level 1\VA_Trigger.cs" />
      <Compile Include="Assets\Scripts\NPC Scripts\EnemySight.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\heldObjectProperties.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\randomMovement.cs" />

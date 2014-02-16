@@ -29,7 +29,7 @@ public class IIA_Trigger : MonoBehaviour {
 						if (targetPosition.z < crate.transform.position.z)
 								crate.transform.Translate (0, 0, -1, Space.World);
 				}
-		if (monster_triggered)
+		if (monster_triggered && monster != null)
 				if (-22 > monster.transform.position.x)
 						monster.transform.Translate (Time.deltaTime *  8, 0, 0, Space.World);
 				else {
