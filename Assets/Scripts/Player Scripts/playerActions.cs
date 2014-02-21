@@ -1,13 +1,17 @@
-﻿using UnityEngine;
+﻿//LOL EVA WAS HERE
+using UnityEngine;
 using System.Collections;
 
 public class playerActions : MonoBehaviour {
 	
 	public GameObject heldObject;
 	public heldObjectProperties heldObjectProp;
+
+	private GameObject monster;
 	
 	// Use this for initialization
 	void Start () {
+		monster = GameObject.FindGameObjectWithTag ("Monster");
 	}
 	
 	// Update is called once per frame
@@ -22,7 +26,8 @@ public class playerActions : MonoBehaviour {
 			{
 				newPos.y -= 0.5f;
 			}
-			heldObject.transform.position = newPos;
+			Vector3 moveToPos = Vector3.MoveTowards(heldObject.transform.position, newPos, 0.5f);
+			heldObject.transform.position = moveToPos;
 			heldObject.transform.rotation = this.transform.rotation;
 		}
 		
@@ -38,9 +43,9 @@ public class playerActions : MonoBehaviour {
 				Camera mainCamera = transform.Find("Main Camera").camera;
 				RaycastHit hit = new RaycastHit();
 				Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit);
-
 				if(hit.collider != null){
-					GameObject hitObject = GameObject.Find( hit.collider.gameObject.name ).transform.gameObject;
+					GameObject hitObject = hit.collider.gameObject.transform.parent.gameObject;
+					print("Hit " + hitObject.name);
 					heldObjectProperties hitObjectProp = (heldObjectProperties) hitObject.GetComponent(typeof(heldObjectProperties));
 					heldObject = (hitObject.tag == "powerCell" || hitObject.tag == "lantern" && hitObjectProp.DtoPlayer <= 3) ? hitObject : null;
 					if(heldObject != null){
@@ -52,4 +57,8 @@ public class playerActions : MonoBehaviour {
 			}
 		}
 	}
+
+	//Check player field of view
+	//return game object if it exists, otherwise return null
+
 }
