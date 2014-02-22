@@ -10,10 +10,12 @@ public class worldManager : MonoBehaviour
 	//Semantic variables
 	public Light[] lights;
 	public GameObject player;
+	private playerStatus playerStatus;
+
 	public Camera camera;
 	public cameraEffectHandler camEffects;
 	public GUITexture camFaderTexture;
-	
+	public GameObject monster;
 	/*
 	private bool zoom = false;
 	private float angle = 0;

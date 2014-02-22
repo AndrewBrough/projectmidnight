@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class heldObjectProperties : MonoBehaviour {
+public class heldObjectProperties : GameBehaviour {
 	
 	public bool held;
 	public bool isOnTrigger;
@@ -23,7 +23,11 @@ public class heldObjectProperties : MonoBehaviour {
 			this.rigidbody.isKinematic = true;
 		else if(!isOnTrigger)
 			this.rigidbody.isKinematic = false;
-		
+
+		if(this.transform.position.y <= -50){
+			Vector3 reset = world.player.transform.position;
+			this.transform.position = reset;
+		}
 	}
 	
 	void getDistanceToPlayer(){
