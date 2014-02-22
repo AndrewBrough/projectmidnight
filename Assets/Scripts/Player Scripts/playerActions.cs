@@ -23,7 +23,7 @@ public class playerActions : GameBehaviour {
 		if(heldObject != null){
 			heldObject.transform.position = world.camera.transform.position + world.camera.transform.forward;
 			Vector3 newPos = heldObject.transform.position;
-			newPos.y += 0.5f;
+			newPos.y += 0.0f;
 			Vector3 moveToPos = Vector3.MoveTowards(heldObject.transform.position, newPos, 0.5f);
 			heldObject.transform.position = moveToPos;
 			heldObject.transform.rotation = this.transform.rotation;
@@ -42,14 +42,22 @@ public class playerActions : GameBehaviour {
 				Physics.Raycast(world.camera.transform.position, world.camera.transform.forward, out hit);
 				if(hit.collider != null){
 					GameObject g = hit.collider.gameObject;
-					GameObject hitObject = (g is GameObject) ? g : hit.collider.gameObject.transform.parent.gameObject;
+					GameObject hitObject = null;
+					if(hit.collider.gameObject.CompareTag("lantern")){
+						hitObject = hit.collider.gameObject;
+					}
+					else if(hit.collider.gameObject.transform.parent.CompareTag("powerCell")){
+						hitObject = hit.collider.gameObject.transform.parent.gameObject;
+					}
 					//print("Hit " + hitObject.name);
-					heldObjectProperties hitObjectProp = (heldObjectProperties) hitObject.GetComponent(typeof(heldObjectProperties));
-					heldObject = (hitObject.tag == "powerCell" || hitObject.tag == "lantern" && hitObjectProp.DtoPlayer <= 3) ? hitObject : null;
-					if(heldObject != null){
-						//print ("picked up " + heldObject.name);
-						heldObjectProp = (heldObjectProperties) heldObject.GetComponent(typeof(heldObjectProperties));
-						heldObjectProp.held = true;
+					if(hitObject != null){
+						heldObjectProperties hitObjectProp = (heldObjectProperties) hitObject.GetComponent(typeof(heldObjectProperties));
+						heldObject = (hitObject.tag == "powerCell" || hitObject.tag == "lantern" && hitObjectProp.DtoPlayer <= 3) ? hitObject : null;
+						if(heldObject != null){
+							//print ("picked up " + heldObject.name);
+							heldObjectProp = (heldObjectProperties) heldObject.GetComponent(typeof(heldObjectProperties));
+							heldObjectProp.held = true;
+						}
 					}
 				}
 			}
