@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 45ca35d29a93c844c9c3b06f5a0540d0
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 15
   fileIDToRecycleName:
     100000: Floors1
     100002: //RootNode
@@ -2833,5 +2833,4 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
-  additionalBone: 0
   userData: 
