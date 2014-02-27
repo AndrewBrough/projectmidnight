@@ -14,15 +14,19 @@ ModelImporter:
     2300000: pCylinder1
     2300002: pCylinder2
     2300004: pCylinder3
+    2300006: //RootNode
     3300000: pCylinder1
     3300002: pCylinder2
     3300004: pCylinder3
+    3300006: //RootNode
     4300000: pCylinder1
     4300002: pCylinder2
     4300004: pCylinder3
+    4300006: Ceiling_Light
     6400000: pCylinder1
     6400002: pCylinder2
     6400004: pCylinder3
+    6400006: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1

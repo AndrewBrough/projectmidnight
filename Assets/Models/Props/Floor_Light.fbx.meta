@@ -4,10 +4,17 @@ ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Floor_Light
+    100004: group
     400000: //RootNode
+    400002: Floor_Light
+    400004: group
     2300000: //RootNode
+    2300002: Floor_Light
     3300000: //RootNode
+    3300002: Floor_Light
     4300000: pCylinder1
+    4300002: Floor_Light
     9500000: //RootNode
   materials:
     importMaterials: 1

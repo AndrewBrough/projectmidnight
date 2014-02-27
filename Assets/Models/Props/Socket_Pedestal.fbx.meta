@@ -4,11 +4,21 @@ ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
+    100002: group
+    100004: group1
+    100006: Socket_Pedestal
     400000: //RootNode
+    400002: group
+    400004: group1
+    400006: Socket_Pedestal
     2300000: //RootNode
+    2300002: Socket_Pedestal
     3300000: //RootNode
+    3300002: Socket_Pedestal
     4300000: polySurface1
+    4300002: Socket_Pedestal
     6400000: //RootNode
+    6400002: Socket_Pedestal
     9500000: //RootNode
   materials:
     importMaterials: 1
