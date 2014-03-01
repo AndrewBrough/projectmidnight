@@ -7,14 +7,18 @@ public class playerActions : GameBehaviour {
 	public GameObject heldObject;
 	public heldObjectProperties heldObjectProp;
 	
-	private bool crouched = false;
-	private float crouchCamHeight = 0.4f;
-	
+	public bool crouched = false;
+	public bool running = false;
+	public float defaultSpeed;
+	private float runSpeed = 12.0f;
+	private float crouchSpeed = 4.0f;
 	private int forwardCount = 0;//number of button taps for running
 	private float forwardCooldown = 0.5f; //time to check for a second tap to run
 	
 	// Use this for initialization
 	void Start () {
+		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
+		defaultSpeed = c.movement.maxForwardSpeed;
 	}
 	
 	// Update is called once per frame
@@ -63,49 +67,64 @@ public class playerActions : GameBehaviour {
 			}
 		}
 		if(Input.GetKeyDown(KeyCode.LeftControl) && !crouched){
-			Crouch();
+			MakeCrouch();
 		}
 		if(!Input.GetKey(KeyCode.LeftControl) && crouched){
 			//check if anything above player, then stand if able
 			RaycastHit hit = new RaycastHit();
-			Physics.Raycast(world.camera.transform.position, world.camera.transform.up, out hit, 2);
+			Physics.Raycast(world.camera.transform.position, world.camera.transform.up, out hit, 1f);
 			if(hit.collider==null)
-				UnCrouch();
+				StopCrouch();
 		}
-		/* RUNNING STUFF
-		 * can't do because default player controller would need to be re written in C#. Will implement running in new js script
+		//new running stuff
+		//can't do because default player controller would need to be re written in C#. Will implement running in new js script
 		if(Input.GetKeyDown(KeyCode.W)){
 			if ( forwardCooldown > 0 && forwardCount == 1){
 				//Has double tapped
-				Run();
+				MakeRun();
 			}else{
-				ButtonCooler = 0.5 ; 
-				ButtonCount += 1 ;
+				StopRun();
+				forwardCooldown = 0.5f; 
+				forwardCount += 1 ;
 			}
 		}
 		if(forwardCooldown > 0)
 			forwardCooldown -= 1 * Time.deltaTime ;
-		else
+		else{
 			forwardCount = 0 ;
-		//stop running
-		if(!Input.GetKey(KeyCode.W)){
-			StopRun();
 		}
-		*/
 	}
 	//crouch and uncrouch
-	private void Crouch(){
+	private void MakeCrouch(){
 		float scaleY = 0.5f;
 		world.player.transform.localScale = new Vector3(1,scaleY,1);
+		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
+		c.movement.maxForwardSpeed = crouchSpeed;
+		c.movement.maxSidewaysSpeed = crouchSpeed;
 		crouched = true;
 	}
-	private void UnCrouch(){
+	private void StopCrouch(){
 		float scaleY = 1.0f;
 		world.player.transform.localScale = new Vector3(1,scaleY,1);
 		Vector3 reset = world.player.transform.position; //player falls through floor if scaled through the floor... so move it up
 		reset.y+=0.5f;
 		world.player.transform.position = reset;
+		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
+		c.movement.maxForwardSpeed = defaultSpeed;
+		c.movement.maxSidewaysSpeed = defaultSpeed;
 		crouched = false;
+	}
+	private void MakeRun(){
+		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
+		c.movement.maxForwardSpeed = runSpeed;
+		c.movement.maxSidewaysSpeed = runSpeed;
+		running = true;
+	}
+	private void StopRun(){
+		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
+		c.movement.maxForwardSpeed = defaultSpeed;
+		c.movement.maxSidewaysSpeed = defaultSpeed;
+		running = false;
 	}
 	
 	//Check player field of view
