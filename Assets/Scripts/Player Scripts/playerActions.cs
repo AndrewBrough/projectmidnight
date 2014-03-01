@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class playerActions : GameBehaviour {
@@ -66,18 +65,19 @@ public class playerActions : GameBehaviour {
 				}
 			}
 		}
-		if(Input.GetKeyDown(KeyCode.LeftControl) && !crouched){
+		//input for crouching
+		if(Input.GetKeyDown(KeyCode.LeftShift) && !crouched){
 			MakeCrouch();
 		}
-		if(!Input.GetKey(KeyCode.LeftControl) && crouched){
+		if(!Input.GetKey(KeyCode.LeftShift) && crouched){
 			//check if anything above player, then stand if able
 			RaycastHit hit = new RaycastHit();
 			Physics.Raycast(world.camera.transform.position, world.camera.transform.up, out hit, 1f);
 			if(hit.collider==null)
 				StopCrouch();
 		}
-		//new running stuff
-		//can't do because default player controller would need to be re written in C#. Will implement running in new js script
+		//new running input
+		//run when player presses forward twice quickly, like in Minecraft
 		if(Input.GetKeyDown(KeyCode.W)){
 			if ( forwardCooldown > 0 && forwardCount == 1){
 				//Has double tapped

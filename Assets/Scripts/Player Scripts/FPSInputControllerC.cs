@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//from https://gist.github.com/zephjc/5641540
+
+using UnityEngine;
 using System.Collections;
 
 // Require a character controller to be attached to the same game object

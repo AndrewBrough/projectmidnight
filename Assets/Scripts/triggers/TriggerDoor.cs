@@ -24,9 +24,7 @@ public class TriggerDoor : MonoBehaviour {
 				if(player.GetComponent<playerActions>().heldObject == null)
 					openDoor();
 			}
-			
 		}
-		
 	}
 	
 	void openDoor() {

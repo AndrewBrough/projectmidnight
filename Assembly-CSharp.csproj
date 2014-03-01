@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\II_Trigger.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\VA_Trigger.cs" />
      <Compile Include="Assets\Scripts\NPC Scripts\EnemySight.cs" />
+     <Compile Include="Assets\Scripts\ObjectScripts\ObjectLabel.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\heldObjectProperties.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\randomMovement.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\CharacterMotorC.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\Player Scripts\playerStatus.cs" />
      <Compile Include="Assets\Scripts\cameraEffectHandler.cs" />
      <Compile Include="Assets\Scripts\loadLevel.cs" />
+     <Compile Include="Assets\Scripts\triggers\RemoveWaypoint.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerDoor.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerDoorPowerCell.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerLights.cs" />

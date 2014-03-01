@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//from https://gist.github.com/zephjc/5641540
+
+using UnityEngine;
 using System.Collections;
 
 //#pragma strict
