@@ -62,6 +62,8 @@
      <Compile Include="Assets\Scripts\Player Scripts\FPSInputControllerC.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\playerActions.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\playerStatus.cs" />
+     <Compile Include="Assets\Scripts\Waypoints\waypointManager.cs" />
+     <Compile Include="Assets\Scripts\Waypoints\waypointTrigger.cs" />
      <Compile Include="Assets\Scripts\cameraEffectHandler.cs" />
      <Compile Include="Assets\Scripts\loadLevel.cs" />
      <Compile Include="Assets\Scripts\triggers\RemoveWaypoint.cs" />

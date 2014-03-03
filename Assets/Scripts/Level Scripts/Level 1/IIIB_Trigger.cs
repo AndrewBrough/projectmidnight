@@ -15,7 +15,7 @@ public class IIIB_Trigger : MonoBehaviour {
 
 	void OnTriggerStay(Collider other)
 	{
-		print (other.tag);
+//		print (other.tag);
 		if (other.tag == "powerCell" && powerCell.GetComponent<heldObjectProperties>().held == false) {
 			//play open animation
 			door.animation.Play ("open");
