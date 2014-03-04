@@ -18,8 +18,21 @@ public class worldManager : MonoBehaviour
 
 
 	//Semantic variables
+	public Light[] floorlights;
+	public Light[] ceilingLights;
 	public Light[] lights;
 	public GameObject player;
+	public bool darknessDisable
+	{
+		get{ return playerStatus.disableDarkness; }
+		set{ playerStatus.disableDarkness = value; }
+	}
+	public bool forceDarkness
+	{
+		get{ return playerStatus.forceDarkness;	}
+		set{playerStatus.forceDarkness = value;	}
+	}
+	
 	private playerStatus playerStatus;
 
 	public Camera camera;
@@ -34,7 +47,7 @@ public class worldManager : MonoBehaviour
 		instance = this;
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
 		camEffects = (cameraEffectHandler)camFaderTexture.GetComponent(typeof(cameraEffectHandler));
-		
+		playerStatus = (playerStatus)player.GetComponent(typeof(playerStatus));
 	}
 
 	void Update(){
