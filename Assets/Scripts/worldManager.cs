@@ -5,8 +5,18 @@ public class worldManager : MonoBehaviour
 {
 	public static worldManager instance {get;private set;}
 	
-	
-	
+	//global variables
+	//choices
+	public enum FearChoice {
+		spiders = 0,
+		fire = 0,
+		heights = 0,
+		claustrophobia = 0
+	};
+
+//	public static FearChoice Choices;
+
+
 	//Semantic variables
 	public Light[] lights;
 	public GameObject player;
@@ -25,6 +35,12 @@ public class worldManager : MonoBehaviour
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
 		camEffects = (cameraEffectHandler)camFaderTexture.GetComponent(typeof(cameraEffectHandler));
 		
+	}
+
+	void Update(){
+		if(Input.){
+
+		}
 	}
 	
 	
