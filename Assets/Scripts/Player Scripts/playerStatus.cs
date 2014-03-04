@@ -11,6 +11,13 @@ public class playerStatus : GameBehaviour {
 	public float lightLevel;
 	public float lightThreshold = 0.35f;
 
+	//NOTE:
+	//Technically, the player can be both in disabledarkness and forcedarkness at the same time
+	//since disableDarkness cancels the darkness mechanic altogether, it takes priority
+	//try not to space LightZones and DarkZones too close together
+
+	public bool disableDarkness = false;
+	public bool forceDarkness = false;
 	
 	void Awake(){
 		//Debug.Log("playerStatus awake");
@@ -26,37 +33,56 @@ public class playerStatus : GameBehaviour {
 	}
 	
 	void FixedUpdate(){
-		//Some light detection
-		int layerMask = 1 << 2;
-		layerMask = ~layerMask;
-		lightLevel = 0;
-		foreach(Light l in world.lights){
-			float dist = Vector3.Distance(world.player.transform.position, l.transform.position);
-			float intensity = (l.intensity / 8);
-			float effectiveRange = (l.range/2) * intensity;
-			
-			
-			RaycastHit hit;
-			if (Physics.Linecast(world.player.transform.position, l.transform.position, out hit, layerMask)){
-				//There is something between the light and the player
-				Debug.DrawLine(world.player.transform.position, l.transform.position, Color.red);
-				
-			}else{
-				Debug.DrawLine(world.player.transform.position, l.transform.position, Color.green);
-				float localLightLevel;
-				
-				dist = Mathf.Clamp(dist, effectiveRange, l.range);
-				//localLightLevel = map(dist, ER, R, 0, 1)
-				localLightLevel = 1 - (dist - effectiveRange) / (l.range - effectiveRange);
-				
-				lightLevel += localLightLevel;
 
+		//necessary checks to see if inside a full-lit zone, or a full-dark zone
+
+
+		if (disableDarkness){
+
+			if (world.camEffects.lightLevel <1){
+				world.camEffects.lightLevel+= 0.5f;
 			}
+
+			health += 0.5f;
+			health = Mathf.Clamp(health, 0, maxHealth);	
+			return;
 		}
+
+		//Some light detection
+		lightLevel = 0;
 		
-		
-		lightLevel = Mathf.Clamp(lightLevel, 0, 1);
-		
+		if (!forceDarkness){
+			int layerMask = 1 << 2;
+			layerMask = ~layerMask;
+
+			foreach(Light l in world.lights){
+				float dist = Vector3.Distance(world.player.transform.position, l.transform.position);
+				float intensity = (l.intensity / 8);
+				float effectiveRange = (l.range/2) * intensity;
+				
+				
+				RaycastHit hit;
+				if (Physics.Linecast(world.player.transform.position, l.transform.position, out hit, layerMask)){
+					//There is something between the light and the player
+					Debug.DrawLine(world.player.transform.position, l.transform.position, Color.red);
+					
+				}else{
+					Debug.DrawLine(world.player.transform.position, l.transform.position, Color.green);
+					float localLightLevel;
+					
+					dist = Mathf.Clamp(dist, effectiveRange, l.range);
+					//localLightLevel = map(dist, ER, R, 0, 1)
+					localLightLevel = 1 - (dist - effectiveRange) / (l.range - effectiveRange);
+					
+					lightLevel += localLightLevel;
+
+				}
+			}
+			
+			
+			lightLevel = Mathf.Clamp(lightLevel, 0, 1);
+		}
+
 		
 		if (lightLevel >= lightThreshold){
 			if (world.camEffects.lightLevel <1){
