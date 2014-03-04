@@ -13,9 +13,9 @@ public class cameraEffectHandler : GameBehaviour {
 	void Update(){
 		guiTexture.color = new Color(0,0,0,1-lightLevel);
 	}
-	
+
 	public void changeFOV(float degree){
-		world.camera.fov = degree;
+		world.camera.fieldOfView = degree;
 	}
 	
 	public void changeAngle(float angle){
