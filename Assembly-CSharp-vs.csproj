@@ -67,8 +67,10 @@
      <Compile Include="Assets\Scripts\cameraEffectHandler.cs" />
      <Compile Include="Assets\Scripts\loadLevel.cs" />
      <Compile Include="Assets\Scripts\triggers\RemoveWaypoint.cs" />
+     <Compile Include="Assets\Scripts\triggers\TriggerDarkZone.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerDoor.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerDoorPowerCell.cs" />
+     <Compile Include="Assets\Scripts\triggers\TriggerLightZone.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerLights.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerLightsPowercell.cs" />
      <Compile Include="Assets\Scripts\worldManager.cs" />
