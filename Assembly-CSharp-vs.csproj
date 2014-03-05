@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Models\Monster\Animate.cs" />
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\GameBehavior.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs" />
@@ -66,7 +67,6 @@
      <Compile Include="Assets\Scripts\Waypoints\waypointTrigger.cs" />
      <Compile Include="Assets\Scripts\cameraEffectHandler.cs" />
      <Compile Include="Assets\Scripts\loadLevel.cs" />
-     <Compile Include="Assets\Scripts\triggers\RemoveWaypoint.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerDarkZone.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerDoor.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerDoorPowerCell.cs" />
