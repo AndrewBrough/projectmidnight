@@ -13,6 +13,7 @@ public class worldManager : MonoBehaviour
 		heights = 0,
 		claustrophobia = 0
 	};
+	public bool paused = false;
 
 //	public static FearChoice Choices;
 
@@ -39,6 +40,8 @@ public class worldManager : MonoBehaviour
 	public cameraEffectHandler camEffects;
 	public GUITexture camFaderTexture;
 	public GameObject monster;
+	public GameObject OptionsMenu;
+
 	/*
 	private bool zoom = false;
 	private float angle = 0;
@@ -48,14 +51,30 @@ public class worldManager : MonoBehaviour
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
 		camEffects = (cameraEffectHandler)camFaderTexture.GetComponent(typeof(cameraEffectHandler));
 		playerStatus = (playerStatus)player.GetComponent(typeof(playerStatus));
+
+		OptionsMenu.SetActive(false);
 	}
 
 	void Update(){
-		if(Input.){
-
+		if (Input.GetKey(KeyCode.Escape)){
+			paused = true;
+			Pause ();
+		}
+		if (Input.GetMouseButton(0)){
+			paused = false;
+			Pause ();
 		}
 	}
-	
-	
-	
+
+	void Pause(){
+		if (paused){
+			Time.timeScale = 0;
+			OptionsMenu.SetActive(true);
+		}
+		if (!paused){
+			Time.timeScale = 1;
+			OptionsMenu.SetActive(false);
+		}
+	}
+
 }
