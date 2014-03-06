@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/worldManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Waypoints/waypointManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/worldManager.cs" Line="57" Column="2" />
+      <File FileName="Assets/Scripts/Waypoints/waypointTrigger.cs" Line="24" Column="5" />
+      <File FileName="Assets/Scripts/worldManager.cs" Line="35" Column="3" />
+      <File FileName="Assets/Scripts/Waypoints/waypointManager.cs" Line="24" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

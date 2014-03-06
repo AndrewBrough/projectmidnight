@@ -10,10 +10,14 @@ public class loadLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		//print (Application.loadedLevelName);
 	}
 
 	void onTriggerEnter(){
+		if (Application.loadedLevelName == "Level_01_Loading_Bay")
+			Application.LoadLevel ("Level_01_Choice");
+		if (Application.loadedLevelName == "Level_01_Choice")
+			Application.LoadLevel ("Level_02_A");
 
 	}
 }

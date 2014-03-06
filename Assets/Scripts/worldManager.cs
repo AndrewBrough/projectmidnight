@@ -53,6 +53,10 @@ public class worldManager : MonoBehaviour
 		playerStatus = (playerStatus)player.GetComponent(typeof(playerStatus));
 
 		OptionsMenu.SetActive(false);
+		//disable lights
+		for(int i = 0; i< lights.Length; i++){
+			lights[i].enabled = false;
+		}
 	}
 
 	void Update(){
