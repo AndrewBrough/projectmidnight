@@ -23,7 +23,7 @@ public class waypointTrigger : GameBehaviour {
 				triggered = true;
 			}
 		}
-		else if (other.transform.parent.CompareTag("powerCell")){
+		else if (other.transform.CompareTag("powerCell")){
 			if (type == triggerType.powercell){
 				triggered = true;
 			}
