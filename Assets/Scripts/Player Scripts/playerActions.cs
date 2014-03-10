@@ -29,42 +29,42 @@ public class playerActions : GameBehaviour {
 			newPos.y += 0.0f;
 			Vector3 moveToPos = Vector3.MoveTowards(heldObject.transform.position, newPos, 0.5f);
 			heldObject.transform.position = moveToPos;
-			heldObject.transform.rotation = this.transform.rotation;
+			Quaternion q = this.transform.rotation;
+			q.y += 1.0f;
+			heldObject.transform.rotation = q;
+//			heldObject.transform.rotation = this.transform.rotation;
 		}
 		
 		if(Input.GetMouseButtonDown(0))
 		{
 			if(heldObject != null)
 			{
-				print ("Dropped: " + heldObject.transform.name);
+//				print ("Dropped: " + heldObject.transform.name);
 				heldObjectProp.held = false;
+				if(!heldObject.rigidbody.isKinematic){
+					heldObject.rigidbody.velocity = Vector3.zero;
+					heldObject.rigidbody.AddForce(transform.forward*30 + Vector3.up*30);
+				}
 				heldObject = null;
 				heldObjectProp = null;
 			} else {
 				RaycastHit hit = new RaycastHit();
 				Physics.Raycast(world.camera.transform.position, world.camera.transform.forward, out hit);
 				if(hit.collider != null){
-					GameObject g = hit.collider.gameObject;
-					GameObject hitObject = null;
-					if(hit.collider.gameObject.CompareTag("lantern")){
-						hitObject = hit.collider.gameObject;
+					if(hit.collider.transform.CompareTag("lantern")){
+						heldObject = hit.collider.gameObject;
+						heldObjectProp = (heldObjectProperties) heldObject.GetComponent(typeof(heldObjectProperties));
+						heldObjectProp.held = true;
 					}
-					else if(hit.collider.gameObject.transform.parent.CompareTag("powerCell")){
-						hitObject = hit.collider.gameObject.transform.parent.gameObject;
-					}
-					//print("Hit " + hitObject.name);
-					if(hitObject != null){
-						heldObjectProperties hitObjectProp = (heldObjectProperties) hitObject.GetComponent(typeof(heldObjectProperties));
-						heldObject = (hitObject.tag == "powerCell" || hitObject.tag == "lantern" && hitObjectProp.DtoPlayer <= 3) ? hitObject : null;
-						if(heldObject != null){
-							//print ("picked up " + heldObject.name);
-							heldObjectProp = (heldObjectProperties) heldObject.GetComponent(typeof(heldObjectProperties));
-							heldObjectProp.held = true;
-						}
+					else if(hit.collider.transform.CompareTag("powerCell")){
+						heldObject = hit.collider.gameObject;
+						heldObjectProp = (heldObjectProperties) heldObject.GetComponent(typeof(heldObjectProperties));
+						heldObjectProp.held = true;
 					}
 				}
 			}
 		}
+
 		//input for crouching
 		if(Input.GetKeyDown(KeyCode.LeftShift) && !crouched){
 			MakeCrouch();

@@ -6,7 +6,8 @@ public class heldObjectProperties : GameBehaviour {
 	public bool held;
 	public bool isOnTrigger;
 	public float DtoPlayer;
-	
+	public int index = 0;
+
 	// Use this for initialization
 	void Start () {
 		held = false;
@@ -15,21 +16,22 @@ public class heldObjectProperties : GameBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 		if(!held) getDistanceToPlayer();
-		
-		//if on a trigger, don't move the object with physics
-		if(isOnTrigger)
-			this.rigidbody.isKinematic = true;
-		else if(!isOnTrigger)
-			this.rigidbody.isKinematic = false;
 
 		if(this.transform.position.y <= -50){
 			Vector3 reset = world.player.transform.position;
 			this.transform.position = reset;
 		}
 	}
-	
+
+	void OnTriggerStay(){
+		this.rigidbody.isKinematic = true;
+//		this.transform.rotation = Quaternion.identity;
+	}
+	void OnTriggerExit(){
+		this.rigidbody.isKinematic = false;
+	}
+
 	void getDistanceToPlayer(){
 		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 		
