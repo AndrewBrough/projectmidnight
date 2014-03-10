@@ -4,7 +4,13 @@ using System.Collections;
 public class IIB_Trigger : MonoBehaviour {
 
 	private GameObject player;
+	//required game objects
 	public GameObject monster;
+	public GameObject growlSource;
+	//sounds
+	public AudioClip sighting;
+	public AudioClip growl;
+
 	bool monster_triggered; 
 
 	// Use this for initialization
@@ -16,13 +22,15 @@ public class IIB_Trigger : MonoBehaviour {
 	void Update () {
 	
 		if (monster_triggered && monster != null)
-			if (26 > monster.transform.position.z)
-				monster.transform.Translate (0, 0, Time.deltaTime * 8, Space.World);
+				if (35 > monster.transform.position.z) {
+						monster.transform.Translate (0, 0, Time.deltaTime * 8, Space.World);
+				}
 		else {
 			//this section is messy and I'm aware of it, basically, delete the instance of the monster
 			//then destroy the trigger
 			UnityEngine.Object.DestroyObject (monster);
 			UnityEngine.Object.DestroyObject (transform.collider);
+			growlSource.audio.PlayOneShot(growl);
 		}
 	}
 
@@ -30,6 +38,7 @@ public class IIB_Trigger : MonoBehaviour {
 		if (!monster_triggered) {
 			if (Vector3.Angle (player.transform.forward, monster.transform.position - player.transform.position) < 30) 
 				monster_triggered = true;
+			monster.audio.Play();
 		}
 	}
 }

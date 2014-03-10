@@ -8,6 +8,9 @@ public class IIA_Trigger : MonoBehaviour {
 	public GameObject crate;
 	private GameObject player;
 	public GameObject monster;
+	public AudioClip crash;
+	public AudioClip sighting;
+	private GameObject mainCamera;
 
 
 	bool crate_triggered; 
@@ -20,25 +23,36 @@ public class IIA_Trigger : MonoBehaviour {
 	void Start () {
 		targetPosition.z = crate.transform.position.z - 6;
 		player = GameObject.FindGameObjectWithTag ("Player");
+		mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
+	
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (crate_triggered) {
-						if (targetPosition.z < crate.transform.position.z)
-								crate.transform.Translate (0, 0, -1, Space.World);
+				if (monster != null) {
+						if (monster.transform.position.x > -25 && !crate_triggered) {
+								crate_triggered = true;
+								//mainCamera.GetComponent<cameraShake> ().Shake ();
+								crate.audio.PlayOneShot (crash);
+						}
+
+						if (crate_triggered) {
+								if (targetPosition.z < crate.transform.position.z)
+										crate.transform.Translate (0, 0, -1, Space.World);
+						}
+						if (monster_triggered)
+						if (-12 > monster.transform.position.x) 
+								monster.transform.Translate (Time.deltaTime * 8, 0, 0, Space.World);
+						else {
+								//this section is messy and I'm aware of it, basically, delete the instance of the monster
+								//then disable the trigger
+								UnityEngine.Object.DestroyObject (monster);
+								UnityEngine.Object.DestroyObject (transform.collider);
+						}				
 				}
-		if (monster_triggered && monster != null)
-				if (-22 > monster.transform.position.x)
-						monster.transform.Translate (Time.deltaTime *  8, 0, 0, Space.World);
-				else {
-						//this section is messy and I'm aware of it, basically, delete the instance of the monster
-						//then disable the trigger
-						UnityEngine.Object.DestroyObject (monster);
-						UnityEngine.Object.DestroyObject (transform.collider);
-				}
-	}
+		}
+
 
 
 	void OnTriggerStay() {
@@ -46,7 +60,9 @@ public class IIA_Trigger : MonoBehaviour {
 						if (Vector3.Angle (player.transform.forward, monster.transform.position - player.transform.position) < 40) {
 								//trigger monster
 								monster_triggered = true;
-								crate_triggered = true;
+								monster.audio.PlayOneShot(sighting);
+								
+								
 						}
 				}
 	}
