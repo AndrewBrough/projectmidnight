@@ -17,7 +17,6 @@ public class worldManager : MonoBehaviour
 
 //	public static FearChoice Choices;
 
-
 	//Semantic variables
 	public Light[] floorlights;
 	public Light[] ceilingLights;
@@ -41,7 +40,7 @@ public class worldManager : MonoBehaviour
 	public GUITexture camFaderTexture;
 	public GameObject monster;
 	public GameObject OptionsMenu;
-
+	
 	/*
 	private bool zoom = false;
 	private float angle = 0;
@@ -49,6 +48,7 @@ public class worldManager : MonoBehaviour
 	void Awake(){
 		instance = this;
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
+		camera = player.GetComponentInChildren<Camera>();
 		camEffects = (cameraEffectHandler)camFaderTexture.GetComponent(typeof(cameraEffectHandler));
 		playerStatus = (playerStatus)player.GetComponent(typeof(playerStatus));
 
