@@ -20,8 +20,8 @@ public class cameraShake : MonoBehaviour {
 	void Update (){
 		if (isShaking) {
 						if (shake_intensity > 0) {
-								transform.position = originPosition + Random.insideUnitSphere * shake_intensity;
-								transform.rotation = new Quaternion (
+								fps.transform.position = originPosition + Random.insideUnitSphere * shake_intensity;
+								fps.transform.rotation = new Quaternion (
 				originRotation.x + Random.Range (-shake_intensity, shake_intensity) * .2f,
 				originRotation.y + Random.Range (-shake_intensity, shake_intensity) * .2f,
 				originRotation.z + Random.Range (-shake_intensity, shake_intensity) * .2f,
@@ -29,9 +29,10 @@ public class cameraShake : MonoBehaviour {
 						
 								shake_intensity -= shake_decay;
 						} else {
-								fps.transform.position = originPosition;
+								fps.transform.position = originPosition;// new Vector3(originPosition.x, 1.0f, originPosition.z);
 								fps.transform.rotation = originRotation;
 								isShaking = false;
+								print (fps.transform.position);
 						}
 				}
 	}

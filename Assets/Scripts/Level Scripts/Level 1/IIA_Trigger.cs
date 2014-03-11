@@ -24,6 +24,9 @@ public class IIA_Trigger : MonoBehaviour {
 		targetPosition.z = crate.transform.position.z - 6;
 		player = GameObject.FindGameObjectWithTag ("Player");
 		mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
+
+		monster.animation.Play ("idle");
+
 	
 
 	}
@@ -33,7 +36,7 @@ public class IIA_Trigger : MonoBehaviour {
 				if (monster != null) {
 						if (monster.transform.position.x > -25 && !crate_triggered) {
 								crate_triggered = true;
-								//mainCamera.GetComponent<cameraShake> ().Shake ();
+								mainCamera.GetComponent<cameraShake> ().Shake ();
 								crate.audio.PlayOneShot (crash);
 						}
 
@@ -43,7 +46,7 @@ public class IIA_Trigger : MonoBehaviour {
 						}
 						if (monster_triggered)
 						if (-12 > monster.transform.position.x) 
-								monster.transform.Translate (Time.deltaTime * 8, 0, 0, Space.World);
+								monster.transform.Translate (Time.deltaTime * 5, 0, 0, Space.World);
 						else {
 								//this section is messy and I'm aware of it, basically, delete the instance of the monster
 								//then disable the trigger
@@ -61,7 +64,7 @@ public class IIA_Trigger : MonoBehaviour {
 								//trigger monster
 								monster_triggered = true;
 								monster.audio.PlayOneShot(sighting);
-								
+								monster.animation.CrossFade("run");
 								
 						}
 				}

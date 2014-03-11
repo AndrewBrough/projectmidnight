@@ -1,0 +1,1191 @@
+fileFormatVersion: 2
+guid: ef161b9d6a8be2c43a771cca989cf15f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ankleL_1
+    100002: ankleL_2
+    100004: ankleL_3
+    100006: ankleR_1
+    100008: ankleR_2
+    100010: ankleR_3
+    100012: bottom_lip_center
+    100014: bottom_lip_L1
+    100016: bottom_lip_L2
+    100018: bottom_lip_R1
+    100020: bottom_lip_R2
+    100022: elbowL_1
+    100024: elbowL_3
+    100026: elbowL__2
+    100028: elbowR_1
+    100030: elbowr_2
+    100032: elbowR_3
+    100034: finger1L2_1
+    100036: finger1L2_2
+    100038: finger1L2_3
+    100040: finger1L_1
+    100042: finger1L_2
+    100044: finger1L_3
+    100046: finger1R2_1
+    100048: finger1R2_2
+    100050: finger1R2_3
+    100052: finger1R_1
+    100054: finger1R_2
+    100056: finger1R_3
+    100058: finger2L2_1
+    100060: finger2L2_2
+    100062: finger2L2_3
+    100064: finger2L_1
+    100066: finger2L_2
+    100068: finger2L_3
+    100070: finger2R2_1
+    100072: finger2R2_2
+    100074: finger2R2_3
+    100076: finger2R_1
+    100078: finger2R_2
+    100080: finger2R_3
+    100082: finger3L2_1
+    100084: finger3L2_2
+    100086: finger3L2_3
+    100088: finger3L_1
+    100090: finger3L_2
+    100092: finger3R2_1
+    100094: finger3R2_2
+    100096: finger3R2_3
+    100098: finger3R_1
+    100100: finger3R_2
+    100102: finger3R_3
+    100104: fnger3L_3
+    100106: footL_1
+    100108: footL_2
+    100110: footL_3
+    100112: footR_1
+    100114: footR_2
+    100116: footR_3
+    100118: head
+    100120: hip_1
+    100122: hip_2
+    100124: hip_3
+    100126: hipL_1
+    100128: hipL_2
+    100130: hipL_3
+    100132: hipR_1
+    100134: hipR_2
+    100136: hipR_3
+    100138: jaw1
+    100140: jaw2
+    100142: jaw_connector
+    100144: lure_base
+    100146: lure_fin1
+    100148: lure_fin_spine
+    100150: lure_lamp
+    100152: lure_lamp_joint
+    100154: lure_spine_joint1
+    100156: //RootNode
+    100158: MonsterL_1:polySurface41
+    100160: Root
+    100162: shoulderL_1
+    100164: shoulderL_2
+    100166: shoulderL_3
+    100168: shoulderR_1
+    100170: shoulderR_2
+    100172: shoulderR_3
+    100174: spike1_base
+    100176: spike1_endjoint
+    100178: spike1_fin1
+    100180: spike1_fin2
+    100182: spike1_tip
+    100184: spike2_base
+    100186: spike2_endjoint
+    100188: spike2_fin
+    100190: spike2_tip
+    100192: spike3_base
+    100194: spike3_endjoint
+    100196: spike3_fin
+    100198: spike3_tip
+    100200: spike4_base
+    100202: spike4_endjoint
+    100204: spike4_fin
+    100206: spike4_tip
+    100208: spike5_base
+    100210: spike5_endjoint
+    100212: spike5_fin
+    100214: spike5_tip
+    100216: tail_2
+    100218: tail_3
+    100220: tail_4
+    100222: tail_5
+    100224: tail_tip
+    100226: thumbL2_1
+    100228: thumbL2_2
+    100230: thumbL2_3
+    100232: thumbL_1
+    100234: thumbL_2
+    100236: thumbL_3
+    100238: thumbR2_1
+    100240: thumbR2_2
+    100242: thumbR2_3
+    100244: thumbR_1
+    100246: thumbR_2
+    100248: thumbR_3
+    100250: top_lip_center1
+    100252: top_lip_L1
+    100254: top_lip_L2
+    100256: top_lip_R1
+    100258: top_lip_R2
+    100260: transform2
+    400000: ankleL_1
+    400002: ankleL_2
+    400004: ankleL_3
+    400006: ankleR_1
+    400008: ankleR_2
+    400010: ankleR_3
+    400012: bottom_lip_center
+    400014: bottom_lip_L1
+    400016: bottom_lip_L2
+    400018: bottom_lip_R1
+    400020: bottom_lip_R2
+    400022: elbowL_1
+    400024: elbowL_3
+    400026: elbowL__2
+    400028: elbowR_1
+    400030: elbowr_2
+    400032: elbowR_3
+    400034: finger1L2_1
+    400036: finger1L2_2
+    400038: finger1L2_3
+    400040: finger1L_1
+    400042: finger1L_2
+    400044: finger1L_3
+    400046: finger1R2_1
+    400048: finger1R2_2
+    400050: finger1R2_3
+    400052: finger1R_1
+    400054: finger1R_2
+    400056: finger1R_3
+    400058: finger2L2_1
+    400060: finger2L2_2
+    400062: finger2L2_3
+    400064: finger2L_1
+    400066: finger2L_2
+    400068: finger2L_3
+    400070: finger2R2_1
+    400072: finger2R2_2
+    400074: finger2R2_3
+    400076: finger2R_1
+    400078: finger2R_2
+    400080: finger2R_3
+    400082: finger3L2_1
+    400084: finger3L2_2
+    400086: finger3L2_3
+    400088: finger3L_1
+    400090: finger3L_2
+    400092: finger3R2_1
+    400094: finger3R2_2
+    400096: finger3R2_3
+    400098: finger3R_1
+    400100: finger3R_2
+    400102: finger3R_3
+    400104: fnger3L_3
+    400106: footL_1
+    400108: footL_2
+    400110: footL_3
+    400112: footR_1
+    400114: footR_2
+    400116: footR_3
+    400118: head
+    400120: hip_1
+    400122: hip_2
+    400124: hip_3
+    400126: hipL_1
+    400128: hipL_2
+    400130: hipL_3
+    400132: hipR_1
+    400134: hipR_2
+    400136: hipR_3
+    400138: jaw1
+    400140: jaw2
+    400142: jaw_connector
+    400144: lure_base
+    400146: lure_fin1
+    400148: lure_fin_spine
+    400150: lure_lamp
+    400152: lure_lamp_joint
+    400154: lure_spine_joint1
+    400156: //RootNode
+    400158: MonsterL_1:polySurface41
+    400160: Root
+    400162: shoulderL_1
+    400164: shoulderL_2
+    400166: shoulderL_3
+    400168: shoulderR_1
+    400170: shoulderR_2
+    400172: shoulderR_3
+    400174: spike1_base
+    400176: spike1_endjoint
+    400178: spike1_fin1
+    400180: spike1_fin2
+    400182: spike1_tip
+    400184: spike2_base
+    400186: spike2_endjoint
+    400188: spike2_fin
+    400190: spike2_tip
+    400192: spike3_base
+    400194: spike3_endjoint
+    400196: spike3_fin
+    400198: spike3_tip
+    400200: spike4_base
+    400202: spike4_endjoint
+    400204: spike4_fin
+    400206: spike4_tip
+    400208: spike5_base
+    400210: spike5_endjoint
+    400212: spike5_fin
+    400214: spike5_tip
+    400216: tail_2
+    400218: tail_3
+    400220: tail_4
+    400222: tail_5
+    400224: tail_tip
+    400226: thumbL2_1
+    400228: thumbL2_2
+    400230: thumbL2_3
+    400232: thumbL_1
+    400234: thumbL_2
+    400236: thumbL_3
+    400238: thumbR2_1
+    400240: thumbR2_2
+    400242: thumbR2_3
+    400244: thumbR_1
+    400246: thumbR_2
+    400248: thumbR_3
+    400250: top_lip_center1
+    400252: top_lip_L1
+    400254: top_lip_L2
+    400256: top_lip_R1
+    400258: top_lip_R2
+    400260: transform2
+    4300000: MonsterL_1:polySurface41
+    7400000: walk
+    7400002: idle
+    7400004: run
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: MonsterL_1:polySurface41
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MonsterL_1:polySurface41
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/hip_3
+        weight: 1
+      - path: Root/hip_3/hip_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_L1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_L1/top_lip_L2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_R1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_R1/top_lip_R2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger1L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger1L_1/finger1L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger2L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger2L_1/finger2L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger3L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger3L_1/finger3L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/thumbL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/thumbL_1/thumbL2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger1R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger1R_1/finger1R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger2R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger2R_1/finger2R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger3R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger3R_1/finger3R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/thumbR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/thumbR_1/thumbR2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_L1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_L1/bottom_lip_L2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_R1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_R1/bottom_lip_R2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1/lure_lamp_joint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1/lure_lamp_joint/lure_lamp
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2/spike1_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2/spike1_endjoint/spike1_tip
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin/spike2_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin/spike2_endjoint/spike2_tip
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger1L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger1L_2/finger1L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger2L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger2L_2/finger2L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger3L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger3L_2/finger3L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/thumbL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/thumbL_2/thumbL2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger1R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger1R_2/finger1R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger2R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger2R_2/finger2R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger3R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger3R_2/finger3R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/thumbR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/thumbR_2/thumbR2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin/spike3_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin/spike3_endjoint/spike3_tip
+        weight: 1
+      - path: Root/hip_3/hipL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger1L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger1L_3/finger1L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger2L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger2L_3/finger2L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/fnger3L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/fnger3L_3/finger3L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/thumbL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/thumbL_3/thumbL2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger1R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger1R_3/finger1R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger2R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger2R_3/finger2R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger3R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger3R_3/finger3R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/thumbR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/thumbR_3/thumbR2_3
+        weight: 1
+      - path: Root/hip_3/spike4_base
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin/spike4_endjoint
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin/spike4_endjoint/spike4_tip
+        weight: 1
+      - path: Root/spike5_base
+        weight: 1
+      - path: Root/spike5_base/spike5_fin
+        weight: 1
+      - path: Root/spike5_base/spike5_fin/spike5_endjoint
+        weight: 1
+      - path: Root/spike5_base/spike5_fin/spike5_endjoint/spike5_tip
+        weight: 1
+      - path: Root/tail_5
+        weight: 1
+      - path: Root/tail_5/tail_4
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2/tail_2
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2/tail_2/tail_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 49
+      lastFrame: 97
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MonsterL_1:polySurface41
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/hip_3
+        weight: 1
+      - path: Root/hip_3/hip_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_L1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_L1/top_lip_L2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_R1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_R1/top_lip_R2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger1L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger1L_1/finger1L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger2L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger2L_1/finger2L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger3L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger3L_1/finger3L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/thumbL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/thumbL_1/thumbL2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger1R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger1R_1/finger1R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger2R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger2R_1/finger2R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger3R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger3R_1/finger3R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/thumbR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/thumbR_1/thumbR2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_L1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_L1/bottom_lip_L2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_R1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_R1/bottom_lip_R2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1/lure_lamp_joint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1/lure_lamp_joint/lure_lamp
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2/spike1_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2/spike1_endjoint/spike1_tip
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin/spike2_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin/spike2_endjoint/spike2_tip
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger1L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger1L_2/finger1L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger2L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger2L_2/finger2L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger3L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger3L_2/finger3L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/thumbL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/thumbL_2/thumbL2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger1R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger1R_2/finger1R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger2R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger2R_2/finger2R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger3R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger3R_2/finger3R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/thumbR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/thumbR_2/thumbR2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin/spike3_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin/spike3_endjoint/spike3_tip
+        weight: 1
+      - path: Root/hip_3/hipL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger1L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger1L_3/finger1L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger2L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger2L_3/finger2L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/fnger3L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/fnger3L_3/finger3L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/thumbL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/thumbL_3/thumbL2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger1R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger1R_3/finger1R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger2R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger2R_3/finger2R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger3R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger3R_3/finger3R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/thumbR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/thumbR_3/thumbR2_3
+        weight: 1
+      - path: Root/hip_3/spike4_base
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin/spike4_endjoint
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin/spike4_endjoint/spike4_tip
+        weight: 1
+      - path: Root/spike5_base
+        weight: 1
+      - path: Root/spike5_base/spike5_fin
+        weight: 1
+      - path: Root/spike5_base/spike5_fin/spike5_endjoint
+        weight: 1
+      - path: Root/spike5_base/spike5_fin/spike5_endjoint/spike5_tip
+        weight: 1
+      - path: Root/tail_5
+        weight: 1
+      - path: Root/tail_5/tail_4
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2/tail_2
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2/tail_2/tail_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 98
+      lastFrame: 129
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MonsterL_1:polySurface41
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/hip_3
+        weight: 1
+      - path: Root/hip_3/hip_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_L1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_L1/top_lip_L2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_R1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/head/top_lip_center1/top_lip_R1/top_lip_R2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger1L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger1L_1/finger1L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger2L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger2L_1/finger2L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger3L_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/finger3L_1/finger3L2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/thumbL_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipL_1/shoulderL_1/elbowL_1/ankleL_1/footL_1/thumbL_1/thumbL2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger1R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger1R_1/finger1R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger2R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger2R_1/finger2R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger3R_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/finger3R_1/finger3R2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/thumbR_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/hipR_1/shoulderR_1/elbowR_1/ankleR_1/footR_1/thumbR_1/thumbR2_1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_L1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_L1/bottom_lip_L2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_R1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/jaw_connector/jaw1/jaw2/bottom_lip_center/bottom_lip_R1/bottom_lip_R2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1/lure_lamp_joint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/lure_base/lure_fin1/lure_fin_spine/lure_spine_joint1/lure_lamp_joint/lure_lamp
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2/spike1_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike1_base/spike1_fin1/spike1_fin2/spike1_endjoint/spike1_tip
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin/spike2_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/hip_1/spike2_base/spike2_fin/spike2_endjoint/spike2_tip
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger1L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger1L_2/finger1L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger2L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger2L_2/finger2L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger3L_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/finger3L_2/finger3L2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/thumbL_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipL_2/shoulderL_2/elbowL__2/ankleL_2/footL_2/thumbL_2/thumbL2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger1R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger1R_2/finger1R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger2R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger2R_2/finger2R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger3R_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/finger3R_2/finger3R2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/thumbR_2
+        weight: 1
+      - path: Root/hip_3/hip_2/hipR_2/shoulderR_2/elbowr_2/ankleR_2/footR_2/thumbR_2/thumbR2_2
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin/spike3_endjoint
+        weight: 1
+      - path: Root/hip_3/hip_2/spike3_base/spike3_fin/spike3_endjoint/spike3_tip
+        weight: 1
+      - path: Root/hip_3/hipL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger1L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger1L_3/finger1L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger2L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/finger2L_3/finger2L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/fnger3L_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/fnger3L_3/finger3L2_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/thumbL_3
+        weight: 1
+      - path: Root/hip_3/hipL_3/shoulderL_3/elbowL_3/ankleL_3/footL_3/thumbL_3/thumbL2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger1R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger1R_3/finger1R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger2R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger2R_3/finger2R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger3R_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/finger3R_3/finger3R2_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/thumbR_3
+        weight: 1
+      - path: Root/hip_3/hipR_3/shoulderR_3/elbowR_3/ankleR_3/footR_3/thumbR_3/thumbR2_3
+        weight: 1
+      - path: Root/hip_3/spike4_base
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin/spike4_endjoint
+        weight: 1
+      - path: Root/hip_3/spike4_base/spike4_fin/spike4_endjoint/spike4_tip
+        weight: 1
+      - path: Root/spike5_base
+        weight: 1
+      - path: Root/spike5_base/spike5_fin
+        weight: 1
+      - path: Root/spike5_base/spike5_fin/spike5_endjoint
+        weight: 1
+      - path: Root/spike5_base/spike5_fin/spike5_endjoint/spike5_tip
+        weight: 1
+      - path: Root/tail_5
+        weight: 1
+      - path: Root/tail_5/tail_4
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2/tail_2
+        weight: 1
+      - path: Root/tail_5/tail_4/tail_3/transform2/tail_2/tail_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

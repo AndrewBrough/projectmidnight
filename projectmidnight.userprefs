@@ -2,16 +2,15 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs">
     <Files>
-      <File FileName="Assets\Scripts\triggers\TriggerDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Audio Scripts\FootstepsPlay.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\triggers\TriggerDoor.cs" Line="26" Column="5" />
+      <File FileName="Assets\Scripts\Audio Scripts\FootstepsPlay.cs" Line="25" Column="25" />
       <File FileName="Assets\Scripts\Audio Scripts\TriggerDoorSound.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs" Line="34" Column="63" />
-      <File FileName="Assets\Scripts\cameraShake.cs" Line="22" Column="33" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIB_Trigger.cs" Line="38" Column="28" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIC_Trigger.cs" Line="10" Column="2" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs" Line="49" Column="56" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIB_Trigger.cs" Line="29" Column="49" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIC_Trigger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level Scripts\Level 1\IIIB_Trigger.cs" Line="10" Column="25" />
       <File FileName="Assets\Scripts\triggers\TriggerDoorPowerCell.cs" Line="26" Column="42" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIIA_Trigger.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIIA_Trigger.cs" Line="15" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

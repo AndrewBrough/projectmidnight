@@ -8,6 +8,7 @@ public class FootstepsPlay : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		audio.Stop ();
+		print (transform.position);
 	}
 	
 	// Update is called once per frame
