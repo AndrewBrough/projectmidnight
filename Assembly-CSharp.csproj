@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Audio Scripts\TriggerLightSound.cs" />
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\GameBehavior.cs" />
+     <Compile Include="Assets\Scripts\Level Scripts\Level 1\Chase_Level1.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\IIB_Trigger.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\IIC_Trigger.cs" />

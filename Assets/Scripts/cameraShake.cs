@@ -9,7 +9,7 @@ public class cameraShake : MonoBehaviour {
 	public float shake_decay;
 	public float shake_intensity;
 	public GameObject fps;
-	bool isShaking;
+	public bool isShaking;
 	
 	/*void OnGUI (){
 		if (GUI.Button (new Rect (20,40,80,20), "Shake")){
@@ -43,5 +43,9 @@ public class cameraShake : MonoBehaviour {
 		shake_intensity = .3f;
 		shake_decay = 0.008f;
 		isShaking = true;
+	}
+
+	public bool IsShaking() {
+		return isShaking;
 	}
 }

@@ -16,14 +16,15 @@ public class IIB_Trigger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
+		monster.animation.Play ("idle");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 		if (monster_triggered && monster != null)
-				if (35 > monster.transform.position.z) {
-						monster.transform.Translate (0, 0, Time.deltaTime * 8, Space.World);
+				if (40 > monster.transform.position.z) {
+						monster.transform.Translate (0, 0, Time.deltaTime * 5, Space.World);
 				}
 		else {
 			//this section is messy and I'm aware of it, basically, delete the instance of the monster
@@ -36,9 +37,10 @@ public class IIB_Trigger : MonoBehaviour {
 
 	void OnTriggerStay() {
 		if (!monster_triggered) {
-			if (Vector3.Angle (player.transform.forward, monster.transform.position - player.transform.position) < 30) 
+			if (Vector3.Angle (player.transform.forward, monster.transform.position - player.transform.position) < 40) 
 				monster_triggered = true;
-			monster.audio.Play();
+				monster.audio.PlayOneShot(sighting);
+				monster.animation.CrossFade("run");
 		}
 	}
 }

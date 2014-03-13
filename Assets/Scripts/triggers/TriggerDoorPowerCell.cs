@@ -10,6 +10,9 @@ public class TriggerDoorPowerCell : MonoBehaviour {
 	public BoxCollider doorBoxCollider;
 	public GameObject powerCell;
 
+	public AudioClip open;
+	public AudioClip close;
+
 	void Start() {
 
 	}
@@ -20,6 +23,7 @@ public class TriggerDoorPowerCell : MonoBehaviour {
 		if (other.tag == "powerCell" && powerCell.GetComponent<heldObjectProperties>().held == false) {
 			//play open animation
 			door.animation.Play ("open");
+			door.audio.PlayOneShot(open);
 			//remove collider
 			doorBoxCollider.enabled = false;
 			//delete trigger
