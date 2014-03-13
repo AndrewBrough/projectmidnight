@@ -48,7 +48,7 @@ public class worldManager : MonoBehaviour
 	void Awake(){
 		instance = this;
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
-		camera = player.GetComponentInChildren<Camera>();
+//		camera = player.GetComponentInChildren<Camera>();
 		camEffects = (cameraEffectHandler)camFaderTexture.GetComponent(typeof(cameraEffectHandler));
 		playerStatus = (playerStatus)player.GetComponent(typeof(playerStatus));
 
