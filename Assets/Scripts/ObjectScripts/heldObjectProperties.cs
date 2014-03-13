@@ -25,7 +25,8 @@ public class heldObjectProperties : GameBehaviour {
 	}
 
 	void OnTriggerStay(){
-		this.rigidbody.isKinematic = true;
+		if(!held)
+			this.rigidbody.isKinematic = true;
 //		this.transform.rotation = Quaternion.identity;
 	}
 	void OnTriggerExit(){
