@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/triggers/TriggerDoorPowerCell.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/triggers/FOV_Changer.cs">
     <Files>
-      <File FileName="Assets/Scripts/Level Scripts/Level 1/Chase_Level1.cs" Line="41" Column="4" />
-      <File FileName="Assets/Scripts/Level Scripts/Level 1/IIIB_Trigger.cs" Line="8" Column="30" />
-      <File FileName="Assets/Scripts/triggers/TriggerDoorPowerCell.cs" Line="8" Column="2" />
+      <File FileName="Assets/Scripts/triggers/FOV_Changer.cs" Line="11" Column="3" />
+      <File FileName="Assets/Scripts/Player Scripts/playerActions.cs" Line="122" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

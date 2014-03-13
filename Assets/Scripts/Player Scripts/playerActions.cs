@@ -118,12 +118,14 @@ public class playerActions : GameBehaviour {
 		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
 		c.movement.maxForwardSpeed = runSpeed;
 		c.movement.maxSidewaysSpeed = runSpeed;
+		//world.camera.fieldOfView += 10;
 		running = true;
 	}
 	private void StopRun(){
 		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
 		c.movement.maxForwardSpeed = defaultSpeed;
 		c.movement.maxSidewaysSpeed = defaultSpeed;
+		//world.camera.fieldOfView -= 10;
 		running = false;
 	}
 	
