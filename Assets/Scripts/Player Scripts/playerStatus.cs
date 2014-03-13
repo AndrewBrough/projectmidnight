@@ -62,10 +62,12 @@ public class playerStatus : GameBehaviour {
 				
 				
 				RaycastHit hit;
-				if (Physics.Linecast(world.player.transform.position, l.transform.position, out hit, layerMask)){
+				if (Physics.Linecast(world.player.transform.position, l.transform.position, out hit, layerMask) && hit.transform.tag != "lantern"){
 					//There is something between the light and the player
+
+
 					Debug.DrawLine(world.player.transform.position, l.transform.position, Color.red);
-					
+
 				}else{
 					Debug.DrawLine(world.player.transform.position, l.transform.position, Color.green);
 					float localLightLevel;
