@@ -41,7 +41,7 @@ public class Chase_Level1 : MonoBehaviour {
 		}
 
 		if (monsterTriggered == true && monster.activeInHierarchy) {
-			monster.transform.Translate (0, 0, Time.deltaTime * -3, Space.World);
+			monster.transform.Translate (0, 0, Time.deltaTime * -5, Space.World);
 			if(!monster.audio.isPlaying)
 				monster.audio.Play();
 			monster.audio.loop = true;
