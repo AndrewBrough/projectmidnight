@@ -1,13 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level Scripts\Level 1\Chase_Level1.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\triggers\TriggerLightsPowercell.cs">
     <Files>
-      <File FileName="Assets\Scripts\Audio Scripts\TriggerDoorSound.cs" Line="12" Column="25" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIA_Trigger.cs" Line="44" Column="59" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\IIIB_Trigger.cs" Line="18" Column="2" />
-      <File FileName="Assets\Scripts\triggers\TriggerDoorPowerCell.cs" Line="27" Column="21" />
-      <File FileName="Assets\Scripts\cameraShake.cs" Line="48" Column="23" />
-      <File FileName="Assets\Scripts\Level Scripts\Level 1\Chase_Level1.cs" Line="65" Column="30" />
+      <File FileName="Assets\Scripts\Waypoints\waypointTrigger.cs" Line="6" Column="32" />
+      <File FileName="Assets\Scripts\ObjectScripts\heldObjectProperties.cs" Line="4" Column="10" />
+      <File FileName="Assets\Scripts\Player Scripts\playerActions.cs" Line="62" Column="1" />
+      <File FileName="Assets\Scripts\Player Scripts\playerStatus.cs" Line="60" Column="41" />
+      <File FileName="Assets\Scripts\triggers\TriggerLightsPowercell.cs" Line="25" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
