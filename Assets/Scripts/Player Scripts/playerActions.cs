@@ -9,8 +9,8 @@ public class playerActions : GameBehaviour {
 	public bool crouched = false;
 	public bool running = false;
 	public float defaultSpeed;
-	private float runSpeed = 12.0f;
-	private float crouchSpeed = 4.0f;
+	private float runSpeed = 10.0f;
+	private float crouchSpeed = 2.0f;
 	private int forwardCount = 0;//number of button taps for running
 	private float forwardCooldown = 0.5f; //time to check for a second tap to run
 	
@@ -88,6 +88,9 @@ public class playerActions : GameBehaviour {
 				forwardCount += 1 ;
 			}
 		}
+		if (Input.GetKeyUp(KeyCode.W)){
+			StopRun();
+		}
 		if(forwardCooldown > 0)
 			forwardCooldown -= 1 * Time.deltaTime ;
 		else{
@@ -101,6 +104,7 @@ public class playerActions : GameBehaviour {
 		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
 		c.movement.maxForwardSpeed = crouchSpeed;
 		c.movement.maxSidewaysSpeed = crouchSpeed;
+		//c.movement.maxBackwardsSpeed = crouchSpeed;
 		crouched = true;
 	}
 	private void StopCrouch(){
@@ -112,20 +116,21 @@ public class playerActions : GameBehaviour {
 		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
 		c.movement.maxForwardSpeed = defaultSpeed;
 		c.movement.maxSidewaysSpeed = defaultSpeed;
+		//c.movement.maxBackwardsSpeed = defaultSpeed;
 		crouched = false;
 	}
 	private void MakeRun(){
 		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
 		c.movement.maxForwardSpeed = runSpeed;
 		c.movement.maxSidewaysSpeed = runSpeed;
-		//world.camera.fieldOfView += 10;
+//		c.movement.maxBackwardsSpeed = runSpeed;
 		running = true;
 	}
 	private void StopRun(){
 		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
 		c.movement.maxForwardSpeed = defaultSpeed;
 		c.movement.maxSidewaysSpeed = defaultSpeed;
-		//world.camera.fieldOfView -= 10;
+//		c.movement.maxBackwardsSpeed = defaultSpeed;
 		running = false;
 	}
 	
