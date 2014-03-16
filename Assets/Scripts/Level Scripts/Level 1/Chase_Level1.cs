@@ -59,6 +59,7 @@ public class Chase_Level1 : MonoBehaviour {
 	void OnTriggerExit() {
 				mainCamera.GetComponent<cameraShake>().Shake ();
 				smashSource.audio.Play();
+		UnityEngine.Object.DestroyObject (transform.collider);
 	}
 
 	

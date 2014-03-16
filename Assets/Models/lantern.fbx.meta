@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f814f4b0f920be24b8d374fcb833cf7a
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Lantern
     100002: //RootNode
@@ -63,4 +63,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 

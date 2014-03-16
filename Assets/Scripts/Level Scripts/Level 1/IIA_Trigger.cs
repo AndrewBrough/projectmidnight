@@ -22,6 +22,7 @@ public class IIA_Trigger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		targetPosition.z = crate.transform.position.z - 6;
+		print (crate.transform.position.z);
 		player = GameObject.FindGameObjectWithTag ("Player");
 		mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 
@@ -46,12 +47,13 @@ public class IIA_Trigger : MonoBehaviour {
 						}
 						if (monster_triggered)
 						if (-12 > monster.transform.position.x) 
-								monster.transform.Translate (Time.deltaTime * 5, 0, 0, Space.World);
+								monster.transform.Translate (Time.deltaTime * 3, 0, 0, Space.World);
 						else {
 								//this section is messy and I'm aware of it, basically, delete the instance of the monster
 								//then disable the trigger
 								UnityEngine.Object.DestroyObject (monster);
 								UnityEngine.Object.DestroyObject (transform.collider);
+				print (crate.transform.position.z);
 						}				
 				}
 		}
