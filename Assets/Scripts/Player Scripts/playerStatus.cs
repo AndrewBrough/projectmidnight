@@ -11,6 +11,11 @@ public class playerStatus : GameBehaviour {
 	public float lightLevel;
 	public float lightThreshold = 0.35f;
 
+	//necessary for field of view changing trigger
+	public float targetFOV = 60.0f;
+	public int FOVisChanging = 0;
+	public float FOVChangeSpeed = 0.5f;
+
 	//NOTE:
 	//Technically, the player can be both in disabledarkness and forcedarkness at the same time
 	//since disableDarkness cancels the darkness mechanic altogether, it takes priority
@@ -31,7 +36,23 @@ public class playerStatus : GameBehaviour {
 		
 		world.camEffects.lightLevel = 1f;
 	}
-	
+
+	void Update(){
+		//for FOV changing
+		if(world.camera.fieldOfView < 110.0f && FOVisChanging != 0){
+			world.camera.fieldOfView += FOVChangeSpeed;
+		}
+		
+		if(world.camera.fieldOfView > 60.0f && FOVisChanging == 0){
+			world.camera.fieldOfView -= FOVChangeSpeed+0.25f;
+		}
+
+		//if there's nothing below the player, change FOV
+		RaycastHit hit = new RaycastHit();
+		Physics.Raycast(world.player.transform.position, Vector3.down, out hit, 10.0f);
+//		print (hit);
+	}
+
 	void FixedUpdate(){
 
 		//necessary checks to see if inside a full-lit zone, or a full-dark zone

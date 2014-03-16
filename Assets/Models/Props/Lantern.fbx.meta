@@ -22,6 +22,7 @@ ModelImporter:
     4300000: pCylinder1
     4300002: pCylinder2
     4300004: pCylinder3
+    4300006: Lantern
     6400000: //RootNode
     9500000: //RootNode
   materials:
