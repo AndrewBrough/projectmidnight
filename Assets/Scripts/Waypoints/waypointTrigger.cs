@@ -12,9 +12,13 @@ public class waypointTrigger : GameBehaviour {
 	};
 	public triggerType type = triggerType.collision;
 
+	void Update(){
+
+	}
+
 	void OnTriggerStay (Collider other){
 		if (other.CompareTag("Player")){
-			print ("Waypoint Reached");
+//			print ("Waypoint Reached" + transform.name);
 			if (type == triggerType.click){
 				if (Input.GetMouseButton(0)){
 					triggered = true;
@@ -26,7 +30,9 @@ public class waypointTrigger : GameBehaviour {
 		}
 		else if (other.transform.CompareTag("powerCell")){
 			if (type == triggerType.powercell){
-				triggered = true;
+				if(Input.GetMouseButton(0)){
+					triggered = true;
+				}
 			}
 		}
 	}

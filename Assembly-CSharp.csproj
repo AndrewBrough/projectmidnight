@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Models\Monster\Animate.cs" />
+     <Compile Include="Assets\OpenDoorOnStart.cs" />
      <Compile Include="Assets\Scripts\Audio Scripts\FootstepsPlay.cs" />
      <Compile Include="Assets\Scripts\Audio Scripts\Start_Music.cs" />
      <Compile Include="Assets\Scripts\Audio Scripts\TriggerDoorSound.cs" />
