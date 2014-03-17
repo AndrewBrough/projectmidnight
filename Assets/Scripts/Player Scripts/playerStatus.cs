@@ -131,6 +131,7 @@ public class playerStatus : GameBehaviour {
 		//Call camera fall-over event. After that, call respawn upon player input.
 		//Respawn needs to move player to checkpoint, kill cam effects, and then call Start(); again.
 		world.player.transform.position = spawnPoint;
+		Application.LoadLevel (Application.loadedLevelName);
 		Start();
 	}
 }
