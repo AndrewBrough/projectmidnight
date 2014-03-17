@@ -12,9 +12,10 @@ public class playerStatus : GameBehaviour {
 	public float lightThreshold = 0.35f;
 
 	//necessary for field of view changing trigger
-	public float targetFOV = 60.0f;
+	public float targetFOV = 120.0f;
 	public int FOVisChanging = 0;
 	public float FOVChangeSpeed = 0.5f;
+	private float defaultFOV;
 
 	//NOTE:
 	//Technically, the player can be both in disabledarkness and forcedarkness at the same time
@@ -33,18 +34,19 @@ public class playerStatus : GameBehaviour {
 		//Debug.Log("playerStatus spawned");
 		health = maxHealth;
 		spawnPoint = world.player.transform.position;
-		
+		defaultFOV = world.camera.fieldOfView;
+
 		world.camEffects.lightLevel = 1f;
 	}
 
 	void Update(){
 		//for FOV changing
-		if(world.camera.fieldOfView < 110.0f && FOVisChanging != 0){
+		if(world.camera.fieldOfView < targetFOV && FOVisChanging != 0){
 			world.camera.fieldOfView += FOVChangeSpeed;
 		}
 		
-		if(world.camera.fieldOfView > 60.0f && FOVisChanging == 0){
-			world.camera.fieldOfView -= FOVChangeSpeed+0.25f;
+		if(world.camera.fieldOfView > defaultFOV && FOVisChanging == 0){
+			world.camera.fieldOfView -= FOVChangeSpeed;
 		}
 
 		//if there's nothing below the player, change FOV

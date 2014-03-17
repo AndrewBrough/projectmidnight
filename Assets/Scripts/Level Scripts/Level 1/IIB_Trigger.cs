@@ -35,8 +35,8 @@ public class IIB_Trigger : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerStay() {
-		if (!monster_triggered) {
+	void OnTriggerStay(Collider other) {
+		if (!monster_triggered && other.CompareTag("Player")) {
 			if (Vector3.Angle (player.transform.forward, monster.transform.position - player.transform.position) < 40) 
 				monster_triggered = true;
 				monster.audio.PlayOneShot(sighting);

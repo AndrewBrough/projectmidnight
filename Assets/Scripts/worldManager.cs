@@ -46,6 +46,9 @@ public class worldManager : MonoBehaviour
 	private float angle = 0;
 	*/
 	void Awake(){
+		//HIDE CURSOR
+		Screen.showCursor = false;
+
 		instance = this;
 		lights = FindObjectsOfType(typeof(Light)) as Light[];
 //		camera = player.GetComponentInChildren<Camera>();
@@ -55,7 +58,14 @@ public class worldManager : MonoBehaviour
 		OptionsMenu.SetActive(false);
 	}
 
+	private int frame = 0;
+
 	void Update(){
+		frame++;
+		//SCREEN CAP
+		if(Input.GetKey(KeyCode.Keypad0)){
+			Application.CaptureScreenshot("Screenshot_" + frame + ".png", 3);
+		}
 
 		if (Input.GetKey(KeyCode.Escape)){
 			paused = true;
