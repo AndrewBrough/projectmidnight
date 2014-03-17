@@ -79,6 +79,12 @@ public class playerStatus : GameBehaviour {
 			layerMask = ~layerMask;
 
 			foreach(Light l in world.lights){
+
+				//Ignore lights that are off
+				if (!l.enabled){
+					continue;
+				}
+
 				float dist = Vector3.Distance(world.player.transform.position, l.transform.position);
 				float intensity = (l.intensity / 8);
 				float effectiveRange = (l.range/2) * intensity;
