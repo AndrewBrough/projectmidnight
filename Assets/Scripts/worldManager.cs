@@ -56,6 +56,7 @@ public class worldManager : MonoBehaviour
 	}
 
 	void Update(){
+
 		if (Input.GetKey(KeyCode.Escape)){
 			paused = true;
 			Pause ();

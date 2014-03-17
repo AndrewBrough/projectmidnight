@@ -25,12 +25,12 @@ public class heldObjectProperties : GameBehaviour {
 	}
 
 	void OnTriggerStay(){
-		if(!held)
-			this.rigidbody.isKinematic = true;
+//		if(!held)
+//			this.rigidbody.isKinematic = true;
 //		this.transform.rotation = Quaternion.identity;
 	}
 	void OnTriggerExit(){
-		this.rigidbody.isKinematic = false;
+//		this.rigidbody.isKinematic = false;
 	}
 
 	void getDistanceToPlayer(){

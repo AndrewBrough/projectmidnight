@@ -9,7 +9,7 @@ public class playerActions : GameBehaviour {
 	public bool crouched = false;
 	public bool running = false;
 	public float defaultSpeed;
-	private float runSpeed = 10.0f;
+	private float runSpeed = 20.0f;
 	private float crouchSpeed = 2.0f;
 	private int forwardCount = 0;//number of button taps for running
 	private float forwardCooldown = 0.5f; //time to check for a second tap to run
@@ -51,12 +51,7 @@ public class playerActions : GameBehaviour {
 				RaycastHit hit = new RaycastHit();
 				Physics.Raycast(world.camera.transform.position, world.camera.transform.forward, out hit);
 				if(hit.collider != null){
-					if(hit.collider.transform.CompareTag("lantern")){
-						heldObject = hit.collider.gameObject;
-						heldObjectProp = (heldObjectProperties) heldObject.GetComponent(typeof(heldObjectProperties));
-						heldObjectProp.held = true;
-					}
-					else if(hit.collider.transform.CompareTag("powerCell")){
+					if(hit.collider.transform.CompareTag("holdable")){
 						heldObject = hit.collider.gameObject;
 						heldObjectProp = (heldObjectProperties) heldObject.GetComponent(typeof(heldObjectProperties));
 						heldObjectProp.held = true;
