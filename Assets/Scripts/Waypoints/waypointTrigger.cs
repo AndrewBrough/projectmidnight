@@ -14,6 +14,7 @@ public class waypointTrigger : GameBehaviour {
 
 	void OnTriggerStay (Collider other){
 		if (other.CompareTag("Player")){
+			print ("Waypoint Reached");
 			if (type == triggerType.click){
 				if (Input.GetMouseButton(0)){
 					triggered = true;
