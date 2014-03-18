@@ -47,7 +47,7 @@ public class IIA_Trigger : MonoBehaviour {
 						}
 						if (monster_triggered)
 						if (-12 > monster.transform.position.x) 
-								monster.transform.Translate (Time.deltaTime * 3, 0, 0, Space.World);
+								monster.transform.Translate (Time.deltaTime * 5, 0, 0, Space.World);
 						else {
 								//this section is messy and I'm aware of it, basically, delete the instance of the monster
 								//then disable the trigger
@@ -62,7 +62,7 @@ public class IIA_Trigger : MonoBehaviour {
 
 	void OnTriggerStay() {
 		if (!monster_triggered) {
-						if (Vector3.Angle (player.transform.forward, monster.transform.position - player.transform.position) < 40) {
+						if (Vector3.Angle (player.transform.forward, monster.transform.position - player.transform.position) < 50) {
 								//trigger monster
 								monster_triggered = true;
 								monster.audio.PlayOneShot(sighting);

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 9a4a1b0c1215d5a48804bdae5975d265
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
@@ -9,9 +9,10 @@ ModelImporter:
     3300000: //RootNode
     4300000: Door_Single
     6400000: //RootNode
-    7400000: Open
-    7400002: Close
+    7400000: open
+    7400002: close
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -20,7 +21,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -28,7 +29,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Open
+      name: open
       takeName: Take 001
       firstFrame: 1
       lastFrame: 24
@@ -56,7 +57,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Close
+      name: close
       takeName: Take 001
       firstFrame: 25
       lastFrame: 48
@@ -118,5 +119,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
+  additionalBone: 0
   userData: 

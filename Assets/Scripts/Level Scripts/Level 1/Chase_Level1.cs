@@ -6,6 +6,7 @@ using System.Collections;
 public class Chase_Level1 : MonoBehaviour {
 
 	public GameObject monster;
+	public GameObject monsterParent;
 	public GameObject powerCell;
 	public bool monsterTriggered;
 	public GameObject door;
@@ -16,12 +17,14 @@ public class Chase_Level1 : MonoBehaviour {
 	public GameObject smashSource;
 	private GameObject mainCamera;
 
+
 	// Use this for initialization
 	void Start () {
 		monster.SetActive (false);
 		monsterTriggered = false;
 		mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		smashSource.audio.clip = smash;
+
 	}
 	
 	// Update is called once per frame
@@ -39,19 +42,20 @@ public class Chase_Level1 : MonoBehaviour {
 			monster.audio.Play();
 			monster.animation.Play("run");
 		}
+		 
+		if (monsterTriggered == true && monster.activeInHierarchy && monster.transform.position.z > 2f) {
+						monsterParent.transform.Translate (0, 0, Time.deltaTime * -3, Space.World);
+						if (!monster.audio.isPlaying)
+								monster.audio.Play ();
+						monster.audio.loop = true;
 
-		if (monsterTriggered == true && monster.activeInHierarchy) {
-			monster.transform.Translate (0, 0, Time.deltaTime * -5, Space.World);
-			if(!monster.audio.isPlaying)
-				monster.audio.Play();
-			monster.audio.loop = true;
-
-		}
-
+				} else if (monster.transform.position.z < 2f && monster.activeInHierarchy)
+						monster.SetActive (false);
 	}
 
 	void OnTriggerEnter () {
-		monster.SetActive (false);
+		if(monster.activeInHierarchy)
+			monster.SetActive (false);
 		door.animation.Play ("close");
 		door.audio.PlayOneShot (doorClose);
 	}
