@@ -64,7 +64,11 @@ public class worldManager : MonoBehaviour
 		frame++;
 		//SCREEN CAP
 		if(Input.GetKey(KeyCode.Keypad0)){
-			Application.CaptureScreenshot("Screenshot_" + frame + ".png", 5);
+			Application.CaptureScreenshot("Screenshot_" + frame + ".png", 2);
+		}
+		//EXIT GAME
+		if(Input.GetKey(KeyCode.Escape) && paused){
+			Application.Quit();
 		}
 
 		if (Input.GetKey(KeyCode.Escape)){

@@ -27,11 +27,11 @@ public class playerActions : GameBehaviour {
 		if(heldObject != null){
 			heldObject.transform.position = world.camera.transform.position + world.camera.transform.forward;
 			Vector3 newPos = heldObject.transform.position;
-			newPos.y += 0.0f;
+			newPos.y -= 0.5f;
 			Vector3 moveToPos = Vector3.MoveTowards(heldObject.transform.position, newPos, 0.5f);
 			heldObject.transform.position = moveToPos;
 			Quaternion q = this.transform.rotation;
-			q.y += 1.0f;
+			//q.y += 1.0f;
 			heldObject.transform.rotation = q;
 //			heldObject.transform.rotation = this.transform.rotation;
 		}

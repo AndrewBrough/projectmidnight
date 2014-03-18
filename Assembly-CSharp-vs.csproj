@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EscToQuit.cs" />
      <Compile Include="Assets\Models\Monster\Animate.cs" />
      <Compile Include="Assets\OpenDoorOnStart.cs" />
      <Compile Include="Assets\Scripts\Audio Scripts\FootstepsPlay.cs" />
@@ -65,7 +66,6 @@
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\II_Trigger.cs" />
      <Compile Include="Assets\Scripts\Level Scripts\Level 1\VA_Trigger.cs" />
      <Compile Include="Assets\Scripts\NPC Scripts\EnemySight.cs" />
-     <Compile Include="Assets\Scripts\ObjectScripts\MoveDoor.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\ObjectLabel.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\heldObjectProperties.cs" />
      <Compile Include="Assets\Scripts\ObjectScripts\randomMovement.cs" />
@@ -88,6 +88,9 @@
      <Compile Include="Assets\Scripts\triggers\TriggerLights.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerLightsPowercell.cs" />
      <Compile Include="Assets\Scripts\worldManager.cs" />
+     <Compile Include="Assets\fadeInOnStart.cs" />
+     <Compile Include="Assets\openDoorMultiPowerCell.cs" />
+     <Compile Include="Assets\powerCellTrigger.cs" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />

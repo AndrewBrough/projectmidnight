@@ -7,7 +7,8 @@ public class loadLevel : MonoBehaviour {
 		Level_02_A = 0,
 		Level_02_B = 1,
 		Level_02_C = 2,
-		Level_02_D = 3
+		Level_02_D = 3,
+		Title = 4
 	};
 
 	public Levels LevelToLoad;

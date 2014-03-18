@@ -7,11 +7,13 @@ public class heldObjectProperties : GameBehaviour {
 	public bool isOnTrigger;
 	public float DtoPlayer;
 	public int index = 0;
+	private Vector3 startPosition;
 
 	// Use this for initialization
 	void Start () {
 		held = false;
 		isOnTrigger = false;
+		startPosition = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -19,8 +21,9 @@ public class heldObjectProperties : GameBehaviour {
 		if(!held) getDistanceToPlayer();
 
 		if(this.transform.position.y <= -50){
-			Vector3 reset = world.player.transform.position;
-			this.transform.position = reset;
+//			Vector3 reset = world.player.transform.position;
+			this.transform.position = startPosition;
+			this.rigidbody.velocity = Vector3.zero;
 		}
 	}
 
