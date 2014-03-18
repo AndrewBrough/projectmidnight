@@ -18,8 +18,14 @@ public class heldObjectProperties : GameBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!held) getDistanceToPlayer();
-
+		if(!held){
+			getDistanceToPlayer();
+			rigidbody.isKinematic = false;
+		}
+		//disable collisions when held so as not to send player flying
+		if(held){
+			rigidbody.isKinematic = true;
+		}
 		if(this.transform.position.y <= -50){
 //			Vector3 reset = world.player.transform.position;
 			this.transform.position = startPosition;

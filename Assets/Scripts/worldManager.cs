@@ -67,7 +67,7 @@ public class worldManager : MonoBehaviour
 			Application.CaptureScreenshot("Screenshot_" + frame + ".png", 2);
 		}
 		//EXIT GAME
-		if(Input.GetKey(KeyCode.Escape) && paused){
+		if(Input.GetKey(KeyCode.Escape)){
 			Application.Quit();
 		}
 
