@@ -85,7 +85,7 @@ public class islandManager : GameBehaviour {
 	}
 	
 
-	void UpdateIslands() {
+	public void islandUpdate() {
 
 		//Reset our variables
 		for (int i=0; i<9; i++) {
