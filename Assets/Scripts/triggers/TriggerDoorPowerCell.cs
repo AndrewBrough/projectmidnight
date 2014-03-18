@@ -10,6 +10,7 @@ public class TriggerDoorPowerCell : MonoBehaviour {
 	public BoxCollider doorBoxCollider;
 	public GameObject powerCell;
 
+	public AudioClip place;
 	public AudioClip open;
 	public AudioClip close;
 
@@ -21,6 +22,7 @@ public class TriggerDoorPowerCell : MonoBehaviour {
 	{
 		print (other.tag);
 		if (other.tag == "powerCell" && powerCell.GetComponent<heldObjectProperties>().held == false) {
+			powerCell.audio.PlayOneShot(place);
 			//play open animation
 			door.animation.Play ("open");
 			door.audio.PlayOneShot(open);

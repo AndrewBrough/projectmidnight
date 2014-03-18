@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: 31842b10e58142548acda59659ffc9a8
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: polySurface1
+    100004: Segment_Ceiling:Ceiling
+    100006: Segment_Ceiling:Floors1
+    100008: Segment_Floor_Metal:Floors1
+    100010: Segment_Floor_Metal:Segment_Floor
+    100012: Segment_Wall:group
+    100014: Segment_Wall:group1
+    100016: Segment_Wall:group2
+    100018: Segment_Wall:group3
+    100020: Segment_Wall:pasted__Segment_Wall
+    100022: Segment_Wall:pasted__Segment_Wall 1
+    100024: Segment_Wall:pasted__Segment_Wall 2
+    100026: Segment_Wall:pasted__Segment_Wall 3
+    100028: Segment_Wall:pasted__Walls1
+    100030: Segment_Wall:pasted__Walls1 1
+    100032: Segment_Wall:pasted__Walls1 2
+    100034: Segment_Wall:pasted__Walls1 3
+    100036: Segment_Wall:WallBase1
+    100038: transform1
+    100040: transform2
+    100042: transform3
+    100044: transform4
+    100046: transform5
+    100048: WallBase1
+    100050: WallBase2
+    400000: //RootNode
+    400002: polySurface1
+    400004: Segment_Ceiling:Ceiling
+    400006: Segment_Ceiling:Floors1
+    400008: Segment_Floor_Metal:Floors1
+    400010: Segment_Floor_Metal:Segment_Floor
+    400012: Segment_Wall:group
+    400014: Segment_Wall:group1
+    400016: Segment_Wall:group2
+    400018: Segment_Wall:group3
+    400020: Segment_Wall:pasted__Segment_Wall
+    400022: Segment_Wall:pasted__Segment_Wall 1
+    400024: Segment_Wall:pasted__Segment_Wall 2
+    400026: Segment_Wall:pasted__Segment_Wall 3
+    400028: Segment_Wall:pasted__Walls1
+    400030: Segment_Wall:pasted__Walls1 1
+    400032: Segment_Wall:pasted__Walls1 2
+    400034: Segment_Wall:pasted__Walls1 3
+    400036: Segment_Wall:WallBase1
+    400038: transform1
+    400040: transform2
+    400042: transform3
+    400044: transform4
+    400046: transform5
+    400048: WallBase1
+    400050: WallBase2
+    2300000: polySurface1
+    3300000: polySurface1
+    4300000: polySurface1
+    6400000: polySurface1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

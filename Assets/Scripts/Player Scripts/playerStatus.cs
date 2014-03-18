@@ -79,6 +79,12 @@ public class playerStatus : GameBehaviour {
 			layerMask = ~layerMask;
 
 			foreach(Light l in world.lights){
+
+				//Ignore lights that are off
+				if (!l.enabled){
+					continue;
+				}
+
 				float dist = Vector3.Distance(world.player.transform.position, l.transform.position);
 				float intensity = (l.intensity / 8);
 				float effectiveRange = (l.range/2) * intensity;
@@ -129,7 +135,7 @@ public class playerStatus : GameBehaviour {
 		
 	}
 	
-	void Die(){
+	public void Die(){
 		//Call camera fall-over event. After that, call respawn upon player input.
 		//Respawn needs to move player to checkpoint, kill cam effects, and then call Start(); again.
 		world.player.transform.position = spawnPoint;
