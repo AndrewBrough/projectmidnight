@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EscToQuit.cs" />
+     <Compile Include="Assets\IVB_trigger.cs" />
      <Compile Include="Assets\Models\Monster\Animate.cs" />
      <Compile Include="Assets\OpenDoorOnStart.cs" />
      <Compile Include="Assets\Scripts\Audio Scripts\FootstepsPlay.cs" />
