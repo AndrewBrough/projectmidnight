@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/triggers/FOV_Changer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/playSoundOnCollision.cs">
     <Files>
-      <File FileName="Assets/Scripts/triggers/FOV_Changer.cs" Line="11" Column="3" />
-      <File FileName="Assets/Scripts/Player Scripts/playerActions.cs" Line="122" Column="18" />
+      <File FileName="Assets/IVB_trigger.cs" Line="57" Column="27" />
+      <File FileName="Assets/Scripts/Level Scripts/Level 1/Monster_Collision.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/Level Scripts/Level 1/Chase_Level1.cs" Line="22" Column="17" />
+      <File FileName="Assets/disableObject.cs" Line="13" Column="2" />
+      <File FileName="Assets/playSoundOnCollision.cs" Line="9" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
