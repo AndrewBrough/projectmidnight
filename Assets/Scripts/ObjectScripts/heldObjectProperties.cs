@@ -21,10 +21,12 @@ public class heldObjectProperties : GameBehaviour {
 		if(!held){
 			getDistanceToPlayer();
 			rigidbody.isKinematic = false;
+			collider.enabled = true;
 		}
 		//disable collisions when held so as not to send player flying
 		if(held){
 			rigidbody.isKinematic = true;
+			collider.enabled = false;
 		}
 		if(this.transform.position.y <= -50){
 //			Vector3 reset = world.player.transform.position;

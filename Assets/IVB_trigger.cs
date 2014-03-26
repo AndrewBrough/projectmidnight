@@ -29,14 +29,14 @@ public class IVB_trigger : GameBehaviour {
 			monster.transform.LookAt( new Vector3(world.player.transform.position.x, 0, world.player.transform.position.z));
 			if(Vector3.Distance(monster.transform.position, world.player.transform.position) > 2){
 				Vector3 target = new Vector3(world.player.transform.position.x, monster.transform.position.y, world.player.transform.position.z);
-				monster.transform.position = Vector3.MoveTowards(monster.transform.position, target, 0.05f);
+				monster.transform.position = Vector3.MoveTowards(monster.transform.position, target, 0.01f);
 			}
 		}
 	}
 
 	void OnTriggerStay(Collider other){
 		if(type == triggerType.heldObject){
-			if(world.player.GetComponent<playerActions>().heldObject != null && !complete){
+			if(world.player.GetComponent<playerActions>().heldObject != null && world.player.GetComponent<playerActions>().heldObject.CompareTag("powerCell") && !complete){
 				StartCoroutine(MoveObjects());
 //				world.camera.GetComponent<cameraShake>().Shake();
 				complete = true;
@@ -62,9 +62,11 @@ public class IVB_trigger : GameBehaviour {
 
 		crate1.audio.Play();
 		crate2.audio.Play();
-//		yield return new WaitForSeconds(0.5f);
-//		monster.transform.Translate(monster.transform.forward*-3);
+
+		//ANIMATIONS NOT WORKING!!??
+		monster.animation["run"].wrapMode = WrapMode.Loop;
 		monster.animation.Play("run");
+
 		yield return new WaitForSeconds(0.5f);
 		//play roar animation and sfx
 		monster.animation.Play("idle");
