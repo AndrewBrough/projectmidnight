@@ -58,14 +58,7 @@ public class worldManager : MonoBehaviour
 		OptionsMenu.SetActive(false);
 	}
 
-	private int frame = 0;
-
 	void Update(){
-		frame++;
-		//SCREEN CAP
-		if(Input.GetKey(KeyCode.Keypad0)){
-			Application.CaptureScreenshot("Screenshot_" + frame + ".png", 2);
-		}
 		//EXIT GAME
 		if(Input.GetKey(KeyCode.Escape)){
 			Application.Quit();
