@@ -20,14 +20,19 @@ public class powerCellTrigger : MonoBehaviour {
 		if(other.CompareTag("powerCell") && other.gameObject.GetComponent<heldObjectProperties>().index == index){
 			other.collider.transform.position = transform.position;
 			other.collider.transform.rotation = transform.rotation;
+			other.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 			powercell = other.collider.gameObject;
 			if(!isTriggered)
 				audio.Play();
 			isTriggered = true;
+			powercell.GetComponent<heldObjectProperties>().isOnTrigger = true;
 		}
 	}
 	void OnTriggerExit(Collider other){
-		if(other.CompareTag("powerCell"))
-		   isTriggered = false;
+		if(other.CompareTag("powerCell")){
+			isTriggered = false;
+			other.rigidbody.constraints = RigidbodyConstraints.None;
+			powercell.GetComponent<heldObjectProperties>().isOnTrigger = false;
+		}
 	}
 }

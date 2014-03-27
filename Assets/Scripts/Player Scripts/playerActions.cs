@@ -47,9 +47,11 @@ public class playerActions : GameBehaviour {
 			if( hit.collider != null ){
 				if(hit.collider.CompareTag("holdable") || hit.collider.CompareTag("powerCell") || hit.collider.CompareTag("lantern")){
 					hit.collider.gameObject.GetComponent<heldObjectProperties>().targetted = true;
-					Material[] mats = new Material[2];
-					mats[0] = hit.transform.gameObject.GetComponent<heldObjectProperties>().startMaterial;
+					Material[] mats = new Material[3];
+//					mats[0] = hit.transform.gameObject.GetComponent<heldObjectProperties>().startMaterial;
+					mats[0] = Resources.Load("lightup_material", typeof(Material)) as Material;
 					mats[1] = Resources.Load("lightup_material", typeof(Material)) as Material;
+					mats[2] = Resources.Load("lightup_material", typeof(Material)) as Material;
 					hit.transform.renderer.materials = mats;
 //					hit.collider.gameObject.renderer.material = Resources.Load("lightup_material", typeof(Material)) as Material;
 				}

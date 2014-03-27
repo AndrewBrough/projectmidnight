@@ -1,12 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/playSoundOnCollision.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/powerCellTrigger.cs">
     <Files>
-      <File FileName="Assets/IVB_trigger.cs" Line="57" Column="27" />
-      <File FileName="Assets/Scripts/Level Scripts/Level 1/Monster_Collision.cs" Line="11" Column="1" />
-      <File FileName="Assets/Scripts/Level Scripts/Level 1/Chase_Level1.cs" Line="22" Column="17" />
-      <File FileName="Assets/disableObject.cs" Line="13" Column="2" />
-      <File FileName="Assets/playSoundOnCollision.cs" Line="9" Column="40" />
+      <File FileName="Assets/Scripts/Player Scripts/playerActions.cs" Line="27" Column="2" />
+      <File FileName="Assets/Scripts/ObjectScripts/heldObjectProperties.cs" Line="47" Column="21" />
+      <File FileName="Assets/Scripts/worldManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/powerCellTrigger.cs" Line="12" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

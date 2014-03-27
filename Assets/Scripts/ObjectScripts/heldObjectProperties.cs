@@ -9,7 +9,7 @@ public class heldObjectProperties : GameBehaviour {
 	public float DtoPlayer;
 	public int index = 0;
 	private Vector3 startPosition;
-	public Material startMaterial;
+	public Material[] startMaterials;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +17,8 @@ public class heldObjectProperties : GameBehaviour {
 		targetted = false;
 		isOnTrigger = false;
 		startPosition = transform.position;
-		startMaterial = renderer.material;
+		startMaterials = new Material[renderer.materials.Length];
+		startMaterials = renderer.materials;
 	}
 	
 	// Update is called once per frame
@@ -40,9 +41,7 @@ public class heldObjectProperties : GameBehaviour {
 		}
 		//change material to default
 		if(!targetted){
-			Material[] mats = new Material[1];
-			mats[0] = startMaterial;
-			renderer.materials = mats;
+			renderer.materials = startMaterials;
 //			renderer.material = startMaterial;
 		}
 		targetted = false;
