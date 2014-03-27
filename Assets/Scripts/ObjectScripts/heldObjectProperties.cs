@@ -39,8 +39,12 @@ public class heldObjectProperties : GameBehaviour {
 			this.rigidbody.velocity = Vector3.zero;
 		}
 		//change material to default
-		if(!targetted)
-			renderer.material = startMaterial;
+		if(!targetted){
+			Material[] mats = new Material[1];
+			mats[0] = startMaterial;
+			renderer.materials = mats;
+//			renderer.material = startMaterial;
+		}
 		targetted = false;
 	}
 

@@ -39,6 +39,7 @@ public class playerActions : GameBehaviour {
 			heldObject.transform.rotation = q;
 //			heldObject.transform.rotation = this.transform.rotation;
 		}
+		//highlight looked at holdable
 		if(heldObject == null){
 			//get holdable object
 			RaycastHit hit = new RaycastHit();
@@ -46,15 +47,13 @@ public class playerActions : GameBehaviour {
 			if( hit.collider != null ){
 				if(hit.collider.CompareTag("holdable") || hit.collider.CompareTag("powerCell") || hit.collider.CompareTag("lantern")){
 					hit.collider.gameObject.GetComponent<heldObjectProperties>().targetted = true;
-					hit.collider.gameObject.renderer.material = Resources.Load("lightup_material", typeof(Material)) as Material;
+					Material[] mats = new Material[2];
+					mats[0] = hit.transform.gameObject.GetComponent<heldObjectProperties>().startMaterial;
+					mats[1] = Resources.Load("lightup_material", typeof(Material)) as Material;
+					hit.transform.renderer.materials = mats;
+//					hit.collider.gameObject.renderer.material = Resources.Load("lightup_material", typeof(Material)) as Material;
 				}
 			}
-
-			/*get object being looked at
-			 * swap its material
-			 * if look away, reset it's material and make lookatobj null
-			 * if lookatobj not the hit object, reset lookatobj material and save and assign new obj material
-			*/
 		}
 		if(Input.GetMouseButtonDown(0))
 		{
