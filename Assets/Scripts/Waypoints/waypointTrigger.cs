@@ -12,9 +12,7 @@ public class waypointTrigger : GameBehaviour {
 	};
 	public triggerType type = triggerType.collision;
 
-	void Update(){
-
-	}
+	public GameObject nextWaypoint;
 
 	void OnTriggerStay (Collider other){
 		if (other.CompareTag("Player")){

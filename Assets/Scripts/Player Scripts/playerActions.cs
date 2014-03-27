@@ -5,7 +5,9 @@ public class playerActions : GameBehaviour {
 	
 	public GameObject heldObject;
 	public heldObjectProperties heldObjectProp;
-	
+
+	private float checkHitDistance = 3.0f;
+
 	public bool crouched = false;
 	public bool running = false;
 	private float defaultFOV;
@@ -14,7 +16,9 @@ public class playerActions : GameBehaviour {
 	private float crouchSpeed = 2.0f;
 	private int forwardCount = 0;//number of button taps for running
 	private float forwardCooldown = 0.5f; //time to check for a second tap to run
-	
+
+	private GameObject lookAtObject = null;
+
 	// Use this for initialization
 	void Start () {
 		CharacterMotorC c = (CharacterMotorC) world.player.GetComponent("CharacterMotorC");
@@ -27,7 +31,7 @@ public class playerActions : GameBehaviour {
 		if(heldObject != null){
 			heldObject.transform.position = world.camera.transform.position + world.camera.transform.forward;
 			Vector3 newPos = heldObject.transform.position;
-			newPos.y -= 0.5f;
+			newPos.y -= 0.2f;
 			Vector3 moveToPos = Vector3.MoveTowards(heldObject.transform.position, newPos, 0.5f);
 			heldObject.transform.position = moveToPos;
 			Quaternion q = this.transform.rotation;
@@ -35,7 +39,23 @@ public class playerActions : GameBehaviour {
 			heldObject.transform.rotation = q;
 //			heldObject.transform.rotation = this.transform.rotation;
 		}
-		
+		if(heldObject == null){
+			//get holdable object
+			RaycastHit hit = new RaycastHit();
+			Physics.Raycast(world.camera.transform.position, world.camera.transform.forward, out hit, checkHitDistance);
+			if( hit.collider != null ){
+				if(hit.collider.CompareTag("holdable") || hit.collider.CompareTag("powerCell") || hit.collider.CompareTag("lantern")){
+					hit.collider.gameObject.GetComponent<heldObjectProperties>().targetted = true;
+					hit.collider.gameObject.renderer.material = Resources.Load("lightup_material", typeof(Material)) as Material;
+				}
+			}
+
+			/*get object being looked at
+			 * swap its material
+			 * if look away, reset it's material and make lookatobj null
+			 * if lookatobj not the hit object, reset lookatobj material and save and assign new obj material
+			*/
+		}
 		if(Input.GetMouseButtonDown(0))
 		{
 			if(heldObject != null)
@@ -50,7 +70,7 @@ public class playerActions : GameBehaviour {
 				heldObjectProp = null;
 			} else {
 				RaycastHit hit = new RaycastHit();
-				Physics.Raycast(world.camera.transform.position, world.camera.transform.forward, out hit);
+				Physics.Raycast(world.camera.transform.position, world.camera.transform.forward, out hit, checkHitDistance);
 				if(hit.collider != null){
 					if(hit.collider.CompareTag("holdable") || hit.collider.CompareTag("powerCell") || hit.collider.CompareTag("lantern")){
 						heldObject = hit.collider.gameObject;

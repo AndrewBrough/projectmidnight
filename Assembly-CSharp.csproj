@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\triggers\TriggerLights.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerLightsPowercell.cs" />
      <Compile Include="Assets\Scripts\worldManager.cs" />
+     <Compile Include="Assets\Tools\ReplaceSelection.cs" />
      <Compile Include="Assets\disableObject.cs" />
      <Compile Include="Assets\fadeInOnStart.cs" />
      <Compile Include="Assets\openDoorMultiPowerCell.cs" />

@@ -5,9 +5,11 @@ public class Light_Flicker : MonoBehaviour {
 
 	private Light[] lights;
 	private bool lightsOn;
-	private Color defaultColour;
+	private Material defaultMaterial;
+	private Material deadMaterial;
 
-	public float variation = 0;
+	public float variationOn = 1;
+	public float variationOff = 0.05f;
 	public bool flickerMaterial = true;
 
 	//hold instantiated sparks so can be destroyed later
@@ -15,9 +17,11 @@ public class Light_Flicker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		deadMaterial = Resources.Load("dead_light", typeof(Material)) as Material;
+
 		//save default material
 		if(flickerMaterial)
-			defaultColour = renderer.material.color;
+			defaultMaterial = renderer.material;
 
 		//flicker stuff
 		lights = this.GetComponentsInChildren<Light>();
@@ -31,24 +35,17 @@ public class Light_Flicker : MonoBehaviour {
 		}
 		StartCoroutine(Flickering());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 
 	IEnumerator Flickering(){
 		//start flickering
 		while(true){
 			int random1 = Random.Range(0, 5);
 			for(int i = 0; i< random1; i++){
-				flickerOn();
-				yield return new WaitForSeconds(Random.Range(0.0f, 0.05f + variation));
 				flickerOff();
-				yield return new WaitForSeconds(Random.Range(0.0f, 0.05f + variation));
+				yield return new WaitForSeconds(Random.Range(0.0f, variationOff));
+				flickerOn();
+				yield return new WaitForSeconds(Random.Range(0.0f, variationOn));
 			}
-			flickerOff();
-			yield return new WaitForSeconds(Random.Range(0.0f, 1.0f + variation*10));
 		}
 	}
 
@@ -56,7 +53,7 @@ public class Light_Flicker : MonoBehaviour {
 		for(int i = 0; i < lights.Length; i++){
 			lights[i].GetComponent<Light>().enabled = true;
 			if(flickerMaterial)
-				renderer.material.color = defaultColour;
+				renderer.material = defaultMaterial;
 			lightsOn = true;
 		}
 	}
@@ -65,7 +62,7 @@ public class Light_Flicker : MonoBehaviour {
 		for(int i = 0; i < lights.Length; i++){
 			lights[i].GetComponent<Light>().enabled = false;
 			if(flickerMaterial)
-				renderer.material.color = Color.black;
+				renderer.material = deadMaterial;
 			lightsOn = false;
 		}
 	}

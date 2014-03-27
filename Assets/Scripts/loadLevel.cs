@@ -11,8 +11,12 @@ public class loadLevel : MonoBehaviour {
 		Title = 4,
 		Level_01_Loading_Bay = 10
 	};
-
 	public Levels LevelToLoad;
+	public enum triggerType {
+		collision=0,
+		click=1,
+	};
+	public triggerType type = triggerType.collision;
 
 	// Use this for initialization
 	void Start () {
@@ -44,9 +48,13 @@ public class loadLevel : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider other){
+	void OnTriggerStay(Collider other){
 		if(other.CompareTag("Player")){
-			Application.LoadLevel(LevelToLoad.ToString());
+			if(type == triggerType.click && Input.GetMouseButtonDown(0)){
+				Application.LoadLevel(LevelToLoad.ToString());
+			}
+			if(type == triggerType.collision)
+				Application.LoadLevel(LevelToLoad.ToString());
 		}
 	}
 }

@@ -4,16 +4,20 @@ using System.Collections;
 public class heldObjectProperties : GameBehaviour {
 	
 	public bool held;
+	public bool targetted;
 	public bool isOnTrigger;
 	public float DtoPlayer;
 	public int index = 0;
 	private Vector3 startPosition;
+	public Material startMaterial;
 
 	// Use this for initialization
 	void Start () {
 		held = false;
+		targetted = false;
 		isOnTrigger = false;
 		startPosition = transform.position;
+		startMaterial = renderer.material;
 	}
 	
 	// Update is called once per frame
@@ -28,11 +32,16 @@ public class heldObjectProperties : GameBehaviour {
 			rigidbody.isKinematic = true;
 			collider.enabled = false;
 		}
+		//catch if it fell through ground...
 		if(this.transform.position.y <= -50){
 //			Vector3 reset = world.player.transform.position;
 			this.transform.position = startPosition;
 			this.rigidbody.velocity = Vector3.zero;
 		}
+		//change material to default
+		if(!targetted)
+			renderer.material = startMaterial;
+		targetted = false;
 	}
 
 	void OnTriggerStay(){

@@ -29,25 +29,27 @@ public class IVB_trigger : GameBehaviour {
 			monster.transform.LookAt( new Vector3(world.player.transform.position.x, 0, world.player.transform.position.z));
 			if(Vector3.Distance(monster.transform.position, world.player.transform.position) > 2){
 				Vector3 target = new Vector3(world.player.transform.position.x, monster.transform.position.y, world.player.transform.position.z);
-				monster.transform.position = Vector3.MoveTowards(monster.transform.position, target, 0.01f);
+				monster.transform.position = Vector3.MoveTowards(monster.transform.position, target, 0.03f);
 			}
 		}
 	}
 
 	void OnTriggerStay(Collider other){
-		if(type == triggerType.heldObject){
-			if(world.player.GetComponent<playerActions>().heldObject != null && world.player.GetComponent<playerActions>().heldObject.CompareTag("powerCell") && !complete){
-				StartCoroutine(MoveObjects());
-//				world.camera.GetComponent<cameraShake>().Shake();
-				complete = true;
+		if(other.collider.CompareTag("Player")){
+			if(type == triggerType.heldObject){
+				if(world.player.GetComponent<playerActions>().heldObject != null && world.player.GetComponent<playerActions>().heldObject.CompareTag("powerCell") && !complete){
+					StartCoroutine(MoveObjects());
+	//				world.camera.GetComponent<cameraShake>().Shake();
+					complete = true;
+				}
 			}
-		}
-		
-		if(type == triggerType.collision){
-			if(other.collider.CompareTag("Player") && !complete){
-				StartCoroutine(MoveObjects());
-//				world.camera.GetComponent<cameraShake>().Shake();
-				complete = true;
+			
+			if(type == triggerType.collision){
+				if(!complete){
+					StartCoroutine(MoveObjects());
+	//				world.camera.GetComponent<cameraShake>().Shake();
+					complete = true;
+				}
 			}
 		}
 	}
@@ -75,4 +77,5 @@ public class IVB_trigger : GameBehaviour {
 		monster.animation.Play("run");
 		complete = true;
 	}
+
 }
