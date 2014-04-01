@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class EnemySight : MonoBehaviour {
-	public float fieldOfViewAngle = 110f;
+	public float fieldOfViewAngle = 50f;
 	public bool playerInSight;
 	public Vector3 lastSighting;
+	public Vector3 resetPosition = new Vector3(1000f, 1000f, 1000f); 
 
 	private NavMeshAgent nav;
 	private SphereCollider col;
@@ -21,13 +22,21 @@ public class EnemySight : MonoBehaviour {
 
 
 		/*reset*/
-		lastSighting = new Vector3();
-		previousSighting = new Vector3();
+		lastSighting = resetPosition;
+		previousSighting = resetPosition;
 
 	}
 
 	void Update() {
 		previousSighting = lastSighting;
+
+	}
+
+	void OnTriggerExit (Collider other)
+	{
+		//If the player leaves the trigger zone
+		if (other.gameObject == player)
+						playerInSight = false;
 
 	}
 
@@ -42,20 +51,21 @@ public class EnemySight : MonoBehaviour {
 
 			if(angle < fieldOfViewAngle * 0.5f)
 			{
+				if(!Physics.Linecast(this.transform.position, player.transform.position)){
 				/*player is in FOV, check if player isn't obscured by anything*/
 				/*NOTE: col.radius + 40 only temporary due to how scaling works
 				 * will be changed once monster is properly implemented*/
-				RaycastHit hit;
+				/*RaycastHit hit;
 				if(Physics.Raycast(transform.position, direction.normalized, out hit, col.radius + 40))
 				{
 					if(hit.collider.gameObject == player)
-					{
+					{*/
 						playerInSight = true;
 						lastSighting = player.transform.position;
 
-					}
+					/*}
+				}*/
 				}
-
 			}
 		}
 	}
