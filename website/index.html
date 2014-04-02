@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Midnight Game</title>
+        <title>Hyperion Title</title>
         <meta name="description" content="The future website of the game Midnight">
-        
         <link rel="stylesheet" href="index.css">
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js" ></script>
         <script src="index.js"></script>
-        <script src="libraries/jquery.latest.min.js" ></script>
     </head>
     
     <body>
-        <img src="leaves.jpg">
         <div id="main">
-            <h1>Midnight</h1>
-            <p>coming soon</p>
-            <p>2014</p>
+            <img src="monster_face_top.png" class="background absolute-center">
+            
+            <img src="Hyperion_Logo.png" id="HyperionTitle" class="absolute-center" onClick="monsterClose('main.html')" >
         </div>
+        
+        <img src="monster_face_top.png" id="monster-top-start" class="monster">
+        <img src="monster_face_bottom.png" id="monster-bot-start" class="monster">
+        
         <footer>
-            <p>Andrew Brough, Eva Demers-Brett, Curtis Field, Kat Phuong-Nguyen, Hannes Steyn.</p>
+            <p>In memory of Kyle Nash.</p>
+            <p>By Andrew Brough, Eva Demers-Brett, Curtis Field, Kat Phuong-Nguyen, Hannes Steyn.</p>
             <p>BIT Degree. Interactive Multimedia and Design. Class of 2014. </p>
         </footer>
     </body>
