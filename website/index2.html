@@ -11,24 +11,48 @@
     <body>
         <div id="main">
             <img src="monster_face_top.png" class="background absolute-center">
-            <img src="Hyperion_Logo.png" id="HyperionTitle" onClick="clickShiftDown()" >
+            <img src="Hyperion_Logo.png" id="HyperionTitle" onClick="clickShift()" >
             
             <div class="break-50"></div>
             
+            <header>
+                <a href="#Art">Art</a>
+                <a href="#Code">Code</a>
+                <a href="#Team">Team</a>
+                <a href="#Demo">Demo</a>
+            </header>
+            
             <!--iframe id="trailer" width="800" height="450" src="//www.youtube.com/embed/Rm1E3iObdSk" frameborder="0" allowfullscreen></iframe-->
-            <div id="videoFrame" onclick="togglePlay()">
-                <div id="videoMask">play</div>
-                <video id="trailer" width="800" height="450" src="trailer.mp4"></video>
+            <div id="Intro" class="section">
+                <div id="videoFrame">
+                    <video id="trailer" width="800" height="450" src="trailer.mp4" controls></video>
+                </div>
+                <p>Aboard the abandoned space cruise liner The Hyperion, you awake and find yourself lost in darkness. Compelled to discover the Hyperion's secrets, you will solve puzzles and be forced to face your deepest fears.</p>
             </div>
-            
-            <p>stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff</p>
-            
+            <div id="Art" class="section">
+                <h2>Art</h2>
+            </div>
+            <div id="Code" class="section">
+                <h2>Code</h2>
+            </div>
+            <div id="Team" class="section">
+                <h2>Team</h2>
+            </div>
+            <div id="Demo" class="section">
+                <h2>Demo</h2>
+                <p>Since Hyperion is built with Unity, you can play it right in the browser. But a couple warnings.</p>
+                <ol>
+                    <li>It will take a lot of bandwidth to download.</li>
+                    <li>Sound is strongly recommended. Without it, you just won't get that horror experience!</li>
+                </ol>
+                <a href=""><h3>Play It Here</h3></a>
+            </div>
         </div>
         
         <footer>
-            <p>In memory of Kyle Nash.</p>
-            <p>By Andrew Brough, Eva Demers-Brett, Curtis Field, Kat Phuong-Nguyen, Hannes Steyn.</p>
-            <p>BIT Degree. Interactive Multimedia and Design. Class of 2014. </p>
+            <p>In memory of Kyle Nash</p>
+            <p>by Andrew Brough, Eva Demers-Brett, Curtis Field, Kat Phuong-Nguyen, Hannes Steyn</p>
+            <p>BIT Degree Interactive Multimedia and Design Senior Project 2014</p>
         </footer>
     </body>
 </html>

@@ -1,23 +1,23 @@
 window.onload = function(){
-    
+    $(".section").css("height", window.innerHeight);
 }
 
-function clickShiftDown(){
-    $("#main").animate({
-        "margin-top":"0"
-    },400);
-    $(".break-50").animate({
-        "height":"50px"
-    },400);
-//    $("body").css("overflow", "auto");
-}
-
-function togglePlay(){
-    var video = document.getElementById("trailer");
-    var mask = document.getElementById("videoMask")
-    if(video.paused){
-        video.play();
-    } else {
-        video.pause();
+function clickShift(){
+    console.log($("#main").css("margin-top"));
+    if($("#main").css("margin-top") != 0){
+        $("#main").animate({
+            "margin-top":"0",
+        },500);
+        $(".break-50").animate({
+            "height":"0px"
+        },500);
+    }
+    if($("#main").css("margin-top") == "0px"){
+        $("#main").animate({
+            "margin-top":"22%",
+        },500);
+        $(".break-50").animate({
+            "height":"525px"
+        },500);
     }
 }
