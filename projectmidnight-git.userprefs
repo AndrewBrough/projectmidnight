@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player Scripts\playerActions.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Waypoints\waypointManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player Scripts\playerActions.cs" Line="50" Column="40" />
-      <File FileName="Assets\Scripts\ObjectScripts\heldObjectProperties.cs" Line="44" Column="28" />
-      <File FileName="Assets\Resources\Silhouette Only.shader" Line="53" Column="4" />
-      <File FileName="Assets\Resources\Silhouetted Diffuse.shader" Line="85" Column="4" />
+      <File FileName="Assets\powerCellTrigger.cs" Line="16" Column="5" />
+      <File FileName="Assets\openDoorMultiPowerCell.cs" Line="60" Column="20" />
+      <File FileName="Assets\Scripts\Level Scripts\Level 1\Monster_Collision.cs" Line="11" Column="4" />
+      <File FileName="Assets\Scripts\Waypoints\waypointManager.cs" Line="34" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

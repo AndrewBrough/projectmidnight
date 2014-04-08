@@ -8,7 +8,7 @@ public class IVB_trigger : GameBehaviour {
 	public GameObject crate2;
 	public GameObject crate3;
 	public GameObject force_location;
-
+	public float monsterSpeed = 0.005f;
 	private bool complete = false;
 
 	public enum triggerType {
@@ -27,10 +27,10 @@ public class IVB_trigger : GameBehaviour {
 	void Update () {
 		if(complete){
 			monster.transform.LookAt( new Vector3(world.player.transform.position.x, 0, world.player.transform.position.z));
-			if(Vector3.Distance(monster.transform.position, world.player.transform.position) > 2){
-				Vector3 target = new Vector3(world.player.transform.position.x, monster.transform.position.y, world.player.transform.position.z);
-				monster.transform.position = Vector3.MoveTowards(monster.transform.position, target, 0.03f);
-			}
+//			if(Vector3.Distance(monster.transform.position, world.player.transform.position) > 2){
+//				Vector3 target = new Vector3(world.player.transform.position.x, monster.transform.position.y, world.player.transform.position.z);
+//				monster.transform.position = Vector3.MoveTowards(monster.transform.position, target, monsterSpeed);
+//			}
 		}
 	}
 

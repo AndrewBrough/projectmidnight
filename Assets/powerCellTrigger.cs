@@ -23,7 +23,7 @@ public class powerCellTrigger : MonoBehaviour {
 			other.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 			powercell = other.collider.gameObject;
 			if(!isTriggered)
-				audio.Play();
+				powercell.audio.Play();
 			isTriggered = true;
 			powercell.GetComponent<heldObjectProperties>().isOnTrigger = true;
 		}

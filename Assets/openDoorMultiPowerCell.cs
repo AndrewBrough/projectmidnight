@@ -24,17 +24,16 @@ public class openDoorMultiPowerCell : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		t1 = trigger1.GetComponent<powerCellTrigger>();
-		if(t2!=null)
+		if(trigger2!=null)
 			t2 = trigger2.GetComponent<powerCellTrigger>();
-		if(t3!=null)
+		if(trigger3!=null)
 			t3 = trigger3.GetComponent<powerCellTrigger>();
-		if(t4!=null)
+		if(trigger4!=null)
 			t4 = trigger4.GetComponent<powerCellTrigger>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
 		//count up
 		if(t1.isTriggered && !active1){
 			active1 = true;
