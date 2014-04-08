@@ -34,6 +34,7 @@ public class Chase_Level1 : MonoBehaviour {
 			monster.animation.Play("idle");
 			monster.audio.clip = growl;
 			monster.audio.Play();
+			print ("duuur");
 		}
 
 		if (monster.activeInHierarchy && monsterTriggered == false && !monster.audio.isPlaying) {
