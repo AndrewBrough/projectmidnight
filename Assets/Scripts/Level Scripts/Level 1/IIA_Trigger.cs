@@ -27,9 +27,12 @@ public class IIA_Trigger : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		mainCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 
+		monster.animation["run"].speed = 1.3f;
+		monster.animation["idle"].speed = 1.3f;
 		monster.animation.Play ("idle");
 
-	
+		
+
 
 	}
 	

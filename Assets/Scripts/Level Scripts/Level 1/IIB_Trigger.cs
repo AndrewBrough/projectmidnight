@@ -16,6 +16,8 @@ public class IIB_Trigger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
+		monster.animation["run"].speed = 1.3f;
+		monster.animation["idle"].speed = 1.3f;
 		monster.animation.Play ("idle");
 	}
 	
