@@ -7,7 +7,7 @@ public class Monster_Collision : GameBehaviour {
 	void Update(){
 		float DtoPlayer = Vector3.Distance(world.player.transform.position, transform.position);
 		if(DtoPlayer<2.3f){
-			world.player.GetComponent<playerStatus> ().Die ();
+			world.player.GetComponent<playerStatus> ().Die (true);
 		}
 	}
 

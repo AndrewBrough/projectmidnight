@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAI : MonoBehaviour 
+public class EnemyAI : GameBehaviour
 {
-	public float patrolSpeed = 2f;
-	public float chaseSpeed = 5f;
-	public float chaseWaitTime = 8f;
+	public float patrolSpeed = 3f;
+	public float chaseSpeed = 6f;
+	public float chaseWaitTime = 6f;
 	public float patrolWaitTime = 1f;
 	public Transform[] patrolWayPoints;
 	public AudioClip slow;
@@ -17,26 +17,44 @@ public class EnemyAI : MonoBehaviour
 	private float chaseTimer;
 	private float patrolTimer;
 	private int wayPointIndex;
+	private bool roared;
+	private float delay = 2f;
+	private float roarTimer;
+	public AudioClip roar;
 
 	void Awake()
 	{
 		enemySight = GetComponent<EnemySight> ();
 		nav = GetComponent<NavMeshAgent> ();
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
+		roared = true;
+
+		animation["run"].speed = 1.3f;
+		animation["walk"].speed = 1.3f;
 	}
 
 	void Update()
 	{
-		if (enemySight.lastSighting != enemySight.resetPosition)
+		if (enemySight.lastSighting != enemySight.resetPosition) {
+
+		
 						Chasing ();
-				else
+				if(Vector3.Distance(this.transform.position, world.player.transform.position) < 4)
+				{
+					animation.CrossFade("bite");
+					animation.CrossFadeQueued("run");
+					
+				}
+		}
+		else
 						Patrolling ();
+
+
 	}
 
 	void Chasing()
 	{
-
-		print ("Chasing");
+		print("Chasing");
 		Vector3 sightingDeltaPos = enemySight.lastSighting - transform.position;
 		if (sightingDeltaPos.sqrMagnitude > 4f)
 						nav.destination = enemySight.lastSighting;
@@ -44,21 +62,33 @@ public class EnemyAI : MonoBehaviour
 
 		if (nav.remainingDistance < nav.stoppingDistance) {
 						chaseTimer += Time.deltaTime;
-						if (chaseTimer > chaseWaitTime) {
+			if (chaseTimer > chaseWaitTime) {
 								enemySight.lastSighting = enemySight.resetPosition;
 								chaseTimer = 0f;
-								print ("End chase");
+								print ("End chase with roar");
 						}
-				} else {
+				} 
+		else if(world.player.GetComponent<VisibleZones>().visible == false)
+		{
+			enemySight.lastSighting = enemySight.resetPosition;
+			animation.CrossFade("roar");
+			audio.PlayOneShot(roar);
+			chaseTimer = 0f;
+		}
+		else {
 						chaseTimer = 0f;
-						print ("End chase");
 
 				}
 	}
 
 	void Patrolling() 
 	{
-		nav.speed = patrolSpeed;
+		if(animation["roar"].enabled){
+			nav.speed = 0f;
+			animation.CrossFadeQueued("walk");
+		}
+		else
+			nav.speed = patrolSpeed;
 
 		if (nav.destination == enemySight.resetPosition || nav.remainingDistance < nav.stoppingDistance) {
 						patrolTimer += Time.deltaTime;

@@ -93,6 +93,11 @@
      <Compile Include="Assets\Scripts\triggers\TriggerLights.cs" />
      <Compile Include="Assets\Scripts\triggers\TriggerLightsPowercell.cs" />
      <Compile Include="Assets\Scripts\worldManager.cs" />
+     <Compile Include="Assets\Tools\ReplaceSelection.cs" />
+     <Compile Include="Assets\TriggerVisible.cs" />
+     <Compile Include="Assets\VisibleZones.cs" />
+     <Compile Include="Assets\autoRotate90Horizontal.cs" />
+     <Compile Include="Assets\autoRotateUp.cs" />
      <Compile Include="Assets\disableObject.cs" />
      <Compile Include="Assets\display_note.cs" />
      <Compile Include="Assets\fadeInOnStart.cs" />

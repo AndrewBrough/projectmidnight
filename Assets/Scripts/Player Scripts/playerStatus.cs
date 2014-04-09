@@ -24,7 +24,9 @@ public class playerStatus : GameBehaviour {
 
 	public bool disableDarkness = false;
 	public bool forceDarkness = false;
-	
+
+	public AudioSource deathMusic;
+
 	void Awake(){
 		//Debug.Log("playerStatus awake");
 		
@@ -37,6 +39,13 @@ public class playerStatus : GameBehaviour {
 		defaultFOV = world.camera.fieldOfView;
 
 		world.camEffects.lightLevel = 1f;
+
+		AudioSource[] audiosources = world.player.GetComponents<AudioSource>();
+		foreach(AudioSource thing in audiosources){
+			if(thing.clip.name == "V - Death Theme")
+				deathMusic = thing;
+		}
+
 	}
 
 	void Update(){
@@ -127,19 +136,35 @@ public class playerStatus : GameBehaviour {
 
 		
 		health = Mathf.Clamp(health, 0, maxHealth);
-		
+
+		//death play music
+		if(lightLevel < lightThreshold && !deathMusic.isPlaying ){
+			deathMusic.volume = 1;
+			deathMusic.Play();
+		} else if (lightLevel > lightThreshold){
+			//fade out then stop music
+			deathMusic.volume -= 0.05f;
+			if(deathMusic.volume == 0)
+				deathMusic.Stop();
+		}
+
 		if (health <= 0){
 			//Call player death
-			Die();
+			Die(false);
 		}
-		
+		if( world.player.transform.position.y < -30 || world.player.transform.position.y > 20){
+			Die (true);
+		}
 	}
 	
-	public void Die(){
+	public void Die(bool immediate){
 		//Call camera fall-over event. After that, call respawn upon player input.
 		//Respawn needs to move player to checkpoint, kill cam effects, and then call Start(); again.
-		world.player.transform.position = spawnPoint;
-		Application.LoadLevel (Application.loadedLevelName);
-		Start();
+		health = 0;
+		if(immediate || deathMusic.time > 6.0f){
+			world.player.transform.position = spawnPoint;
+			Application.LoadLevel (Application.loadedLevelName);
+			Start();
+		}
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemySight : MonoBehaviour {
+public class EnemySight : GameBehaviour {
 	public float fieldOfViewAngle = 50f;
 	public bool playerInSight;
 	public Vector3 lastSighting;
@@ -41,7 +41,7 @@ public class EnemySight : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other) {
-		if (other.gameObject == player) {
+		if (other.gameObject == player && world.player.GetComponent<VisibleZones>().visible == true) {
 
 			/*is the player in the field of view of the enemy?*/
 			playerInSight = false;
@@ -62,6 +62,7 @@ public class EnemySight : MonoBehaviour {
 					{*/
 						playerInSight = true;
 						lastSighting = player.transform.position;
+						animation.CrossFade("run");
 
 					/*}
 				}*/

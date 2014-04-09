@@ -32,11 +32,15 @@ public class playerActions : GameBehaviour {
 			heldObject.transform.position = world.camera.transform.position + world.camera.transform.forward;
 			Vector3 newPos = heldObject.transform.position;
 			newPos.y -= 0.2f;
+			Quaternion q = this.transform.rotation;
+			if(heldObject.name == "notepad"){
+				q *= Quaternion.Euler(0,-90,0);
+			}
+			heldObject.transform.rotation = q;
 			Vector3 moveToPos = Vector3.MoveTowards(heldObject.transform.position, newPos, 0.5f);
 			heldObject.transform.position = moveToPos;
-			Quaternion q = this.transform.rotation;
 			//q.y += 1.0f;
-			heldObject.transform.rotation = q;
+
 //			heldObject.transform.rotation = this.transform.rotation;
 		}
 		//highlight looked at holdable

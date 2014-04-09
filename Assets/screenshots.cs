@@ -13,7 +13,7 @@ public class screenshots : MonoBehaviour {
 	void Update () {
 		frame++;
 		//SCREEN CAP
-		if(Input.GetKey(KeyCode.Keypad0)){
+		if(Input.GetKey(KeyCode.P)){
 			Application.CaptureScreenshot("Screenshot_" + frame + ".png", 6);
 		}
 	}
