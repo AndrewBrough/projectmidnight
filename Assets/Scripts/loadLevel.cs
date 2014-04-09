@@ -4,12 +4,13 @@ using System.Collections;
 public class loadLevel : GameBehaviour {
 
 	public enum Levels {
-		Level_02_A = 0,
-		Level_02_B = 1,
-		Level_02_C = 2,
-		Level_02_D = 3,
-		Title = 4,
-		Level_01_Loading_Bay = 10
+		Title = 0,
+		Level_01_Loading_Bay = 1,
+		Level_02_A = 2,
+		Level_02_B = 3,
+		Level_02_C = 4,
+		Level_02_D = 5,
+		Level_03_Grand_Hall = 6,
 	};
 	public Levels LevelToLoad;
 	public enum triggerType {
@@ -17,11 +18,6 @@ public class loadLevel : GameBehaviour {
 		click=1,
 	};
 	public triggerType type = triggerType.collision;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,10 +38,15 @@ public class loadLevel : GameBehaviour {
 			LevelToLoad = Levels.Level_02_D;
 			Application.LoadLevel(LevelToLoad.ToString());
 		}
+		if(Input.GetKey(KeyCode.Keypad5)){
+			LevelToLoad = Levels.Level_03_Grand_Hall;
+			Application.LoadLevel(LevelToLoad.ToString());
+		}
 		if(Input.GetKey(KeyCode.Keypad0)){
 			LevelToLoad = Levels.Title;
 			Application.LoadLevel(LevelToLoad.ToString());
 		}
+
 		if(Input.GetKey(KeyCode.Escape)){
 			Application.LoadLevel("Title");
 		}
