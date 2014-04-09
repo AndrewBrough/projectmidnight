@@ -124,7 +124,7 @@ public class IVB_trigger : GameBehaviour {
 		//monster.animation["run"].wrapMode = WrapMode.Loop;
 
 		yield return new WaitForSeconds (1);
-		print ("fuck yeah");
+
 		//monster.audio.Play();
 		//monster.animation.Play("roar");
 
