@@ -59,7 +59,6 @@ public class TriggerIslandPowerCell : GameBehaviour {
 			}
 
 
-			iMan.islandUpdate();
 
 		}
 
@@ -86,10 +85,10 @@ public class TriggerIslandPowerCell : GameBehaviour {
 				iMan.switch4 = false;
 				break;
 			}
-			iMan.islandUpdate();
 
 		}
-		
+
+
 	}
 
 
