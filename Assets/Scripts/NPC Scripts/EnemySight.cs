@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemySight : GameBehaviour {
-	public float fieldOfViewAngle = 50f;
+	public float fieldOfViewAngle = 110f;
 	public bool playerInSight;
 	public Vector3 lastSighting;
 	public Vector3 resetPosition = new Vector3(1000f, 1000f, 1000f); 

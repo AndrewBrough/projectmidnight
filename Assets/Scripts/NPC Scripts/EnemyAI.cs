@@ -65,6 +65,8 @@ public class EnemyAI : GameBehaviour
 			if (chaseTimer > chaseWaitTime) {
 								enemySight.lastSighting = enemySight.resetPosition;
 								chaseTimer = 0f;
+								animation.CrossFade("roar");
+								audio.PlayOneShot(roar);
 								print ("End chase with roar");
 						}
 				} 
