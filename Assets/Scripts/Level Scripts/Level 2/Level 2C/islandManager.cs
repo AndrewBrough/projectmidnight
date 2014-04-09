@@ -85,7 +85,7 @@ public class islandManager : GameBehaviour {
 	}
 	
 
-	public void islandUpdate() {
+	public void Update() {
 
 		//Reset our variables
 		for (int i=0; i<9; i++) {
@@ -154,7 +154,13 @@ public class islandManager : GameBehaviour {
 				foreach(Transform barLight in barLights){
 					barLight.renderer.material = onMat;
 				}
-				islands[i].transform.localScale = new Vector3(1, 1, 1);
+				islands[i].transform.position = Vector3.Lerp(
+					islands[i].transform.position, 
+					new Vector3(
+					islands[i].transform.position.x,
+					-1.5f,
+					islands[i].transform.position.z),
+					0.1f);
 
 
 			}else{
@@ -162,7 +168,14 @@ public class islandManager : GameBehaviour {
 				foreach(Transform barLight in barLights){
 					barLight.renderer.material = offMat;
 				}
-				islands[i].transform.localScale = new Vector3(0.2f, 1, 0.2f);
+				islands[i].transform.position = Vector3.Lerp(
+					islands[i].transform.position, 
+					new Vector3(
+					islands[i].transform.position.x,
+				    10f,
+					islands[i].transform.position.z),
+					0.1f);
+
 			}
 		}
 
