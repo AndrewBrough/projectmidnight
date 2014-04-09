@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 854978ff383177947bda7c6137f7d02f
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Door_Main
+    100004: Door_Main1
+    100006: DoorFrame
+    100008: DoorFrame1
+    100010: DoorSlideyPart
+    100012: DoorSlideyPart1
+    100014: pCube1
+    100016: pCube2
+    100018: polySurface1
+    100020: transform1
+    100022: transform2
+    100024: transform3
+    100026: transform4
+    400000: //RootNode
+    400002: Door_Main
+    400004: Door_Main1
+    400006: DoorFrame
+    400008: DoorFrame1
+    400010: DoorSlideyPart
+    400012: DoorSlideyPart1
+    400014: pCube1
+    400016: pCube2
+    400018: polySurface1
+    400020: transform1
+    400022: transform2
+    400024: transform3
+    400026: transform4
+    2300000: Door_Main
+    2300002: Door_Main1
+    2300004: DoorSlideyPart
+    2300006: DoorSlideyPart1
+    2300008: polySurface1
+    3300000: Door_Main
+    3300002: Door_Main1
+    3300004: DoorSlideyPart
+    3300006: DoorSlideyPart1
+    3300008: polySurface1
+    4300000: Door_Main
+    4300002: Door_Main1
+    4300004: DoorSlideyPart
+    4300006: DoorSlideyPart1
+    4300008: polySurface1
+    6400000: Door_Main
+    6400002: Door_Main1
+    6400004: DoorSlideyPart
+    6400006: DoorSlideyPart1
+    6400008: polySurface1
+    7400000: open
+    7400002: close
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: open
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Door_Main
+        weight: 1
+      - path: Door_Main/Door_Main1
+        weight: 1
+      - path: Door_Main/DoorSlideyPart
+        weight: 1
+      - path: Door_Main/DoorSlideyPart/DoorSlideyPart1
+        weight: 1
+      - path: DoorFrame
+        weight: 1
+      - path: DoorFrame/transform4
+        weight: 1
+      - path: DoorFrame1
+        weight: 1
+      - path: DoorFrame1/transform3
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform2
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/transform1
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: close
+      takeName: Take 001
+      firstFrame: 42
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Door_Main
+        weight: 1
+      - path: Door_Main/Door_Main1
+        weight: 1
+      - path: Door_Main/DoorSlideyPart
+        weight: 1
+      - path: Door_Main/DoorSlideyPart/DoorSlideyPart1
+        weight: 1
+      - path: DoorFrame
+        weight: 1
+      - path: DoorFrame/transform4
+        weight: 1
+      - path: DoorFrame1
+        weight: 1
+      - path: DoorFrame1/transform3
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform2
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/transform1
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0199999996
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  userData: 

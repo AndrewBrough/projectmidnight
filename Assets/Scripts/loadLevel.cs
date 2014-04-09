@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class loadLevel : MonoBehaviour {
+public class loadLevel : GameBehaviour {
 
 	public enum Levels {
 		Level_02_A = 0,
@@ -45,6 +45,9 @@ public class loadLevel : MonoBehaviour {
 		if(Input.GetKey(KeyCode.Keypad0)){
 			LevelToLoad = Levels.Title;
 			Application.LoadLevel(LevelToLoad.ToString());
+		}
+		if(Input.GetKey(KeyCode.Escape)){
+			Application.LoadLevel("Title");
 		}
 	}
 

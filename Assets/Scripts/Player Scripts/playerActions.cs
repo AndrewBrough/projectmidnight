@@ -12,7 +12,7 @@ public class playerActions : GameBehaviour {
 	public bool running = false;
 	private float defaultFOV;
 	public float defaultSpeed;
-	private float runSpeed = 12.0f;
+	private float runSpeed = 11.0f;
 	private float crouchSpeed = 2.0f;
 	private int forwardCount = 0;//number of button taps for running
 	private float forwardCooldown = 0.5f; //time to check for a second tap to run
@@ -49,7 +49,7 @@ public class playerActions : GameBehaviour {
 			RaycastHit hit = new RaycastHit();
 			Physics.Raycast(world.camera.transform.position, world.camera.transform.forward, out hit, checkHitDistance);
 			if( hit.collider != null ){
-				if(hit.collider.CompareTag("holdable") || hit.collider.CompareTag("powerCell") || hit.collider.CompareTag("lantern")){
+				if(hit.collider.CompareTag("holdable") || hit.collider.CompareTag("powerCell") || hit.collider.CompareTag("lantern") || hit.collider.CompareTag("controlPanel")){
 					hit.collider.gameObject.GetComponent<heldObjectProperties>().targetted = true;
 					Material[] mats = new Material[3];
 //					mats[0] = hit.transform.gameObject.GetComponent<heldObjectProperties>().startMaterial;

@@ -76,12 +76,12 @@ public class worldManager : MonoBehaviour
 
 	void Pause(){
 		if (paused){
-			Time.timeScale = 0;
-			OptionsMenu.SetActive(true);
+//			Time.timeScale = 0;
+//			OptionsMenu.SetActive(true);
 		}
 		if (!paused){
-			Time.timeScale = 1;
-			OptionsMenu.SetActive(false);
+//			Time.timeScale = 1;
+//			OptionsMenu.SetActive(false);
 		}
 	}
 

@@ -10,6 +10,9 @@ public class EscToQuit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetMouseButtonDown(0)){
+			Application.LoadLevel("Level_01_Loading_Bay");
+		}
 		//EXIT GAME
 		if(Input.GetKey(KeyCode.Escape)){
 			Application.Quit();

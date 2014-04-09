@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EscToQuit.cs" />
+     <Compile Include="Assets\FinaleEvent.cs" />
      <Compile Include="Assets\IVB_trigger.cs" />
+     <Compile Include="Assets\Load_Logo_3D.cs" />
      <Compile Include="Assets\Models\Monster\Animate.cs" />
+     <Compile Include="Assets\NeverHeldObject.cs" />
      <Compile Include="Assets\OpenDoorOnStart.cs" />
      <Compile Include="Assets\Scripts\Audio Scripts\FootstepsPlay.cs" />
      <Compile Include="Assets\Scripts\Audio Scripts\Start_Music.cs" />
@@ -96,10 +99,12 @@
      <Compile Include="Assets\Tools\ReplaceSelection.cs" />
      <Compile Include="Assets\autoRotate90Horizontal.cs" />
      <Compile Include="Assets\autoRotateUp.cs" />
+     <Compile Include="Assets\closeDoor.cs" />
      <Compile Include="Assets\disableObject.cs" />
      <Compile Include="Assets\display_note.cs" />
      <Compile Include="Assets\fadeInOnStart.cs" />
      <Compile Include="Assets\openDoorMultiPowerCell.cs" />
+     <Compile Include="Assets\playAnimationOnStart.cs" />
      <Compile Include="Assets\playSoundOnCollision.cs" />
      <Compile Include="Assets\powerCellTrigger.cs" />
      <Compile Include="Assets\screenshots.cs" />
