@@ -38,6 +38,8 @@ public class worldManager : MonoBehaviour
 	public Camera camera;
 	public cameraEffectHandler camEffects;
 	public GUITexture camFaderTexture;
+	public GUITexture vignette1;
+	public GUITexture vignette2;
 	public GameObject monster;
 	public GameObject OptionsMenu;
 	
@@ -46,6 +48,7 @@ public class worldManager : MonoBehaviour
 	private float angle = 0;
 	*/
 	void Awake(){
+
 		//HIDE CURSOR
 		Screen.showCursor = false;
 
@@ -54,7 +57,6 @@ public class worldManager : MonoBehaviour
 //		camera = player.GetComponentInChildren<Camera>();
 		camEffects = (cameraEffectHandler)camFaderTexture.GetComponent(typeof(cameraEffectHandler));
 		playerStatus = (playerStatus)player.GetComponent(typeof(playerStatus));
-
 		OptionsMenu.SetActive(false);
 	}
 

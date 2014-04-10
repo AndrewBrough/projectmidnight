@@ -39,6 +39,8 @@ public class playerStatus : GameBehaviour {
 		defaultFOV = world.camera.fieldOfView;
 
 		world.camEffects.lightLevel = 1f;
+		world.camEffects.vignette1_L = 1f;
+		world.camEffects.vignette2_L = 1f;
 
 		AudioSource[] audiosources = world.player.GetComponents<AudioSource>();
 		foreach(AudioSource thing in audiosources){
@@ -49,6 +51,7 @@ public class playerStatus : GameBehaviour {
 	}
 
 	void Update(){
+
 		//for FOV changing
 		if(world.camera.fieldOfView < targetFOV && FOVisChanging != 0){
 			world.camera.fieldOfView += FOVChangeSpeed;
@@ -65,17 +68,10 @@ public class playerStatus : GameBehaviour {
 	}
 
 	void FixedUpdate(){
-
 		//necessary checks to see if inside a full-lit zone, or a full-dark zone
 
-
 		if (disableDarkness){
-
-			if (world.camEffects.lightLevel <1){
-				world.camEffects.lightLevel+= 0.5f;
-			}
-
-			health += 0.5f;
+			darkRecover();
 			health = Mathf.Clamp(health, 0, maxHealth);	
 			return;
 		}
@@ -125,28 +121,17 @@ public class playerStatus : GameBehaviour {
 
 		
 		if (lightLevel >= lightThreshold){
-			if (world.camEffects.lightLevel <1){
-				world.camEffects.lightLevel+= 0.5f;
-			}
-			health += 0.5f;
+			darkRecover();
 		}else{
-			world.camEffects.lightLevel-= 0.01f;
-			health -= 0.5f;
+			darkDamage();
 		}
 
-		
+
 		health = Mathf.Clamp(health, 0, maxHealth);
+		world.camEffects.vignette1_L = Mathf.Clamp (world.camEffects.vignette1_L, 0, 1);
+		world.camEffects.vignette2_L = Mathf.Clamp (world.camEffects.vignette2_L, 0, 1);
 
-		//death play music
-		if(lightLevel < lightThreshold && !deathMusic.isPlaying ){
-			deathMusic.volume = 1;
-			deathMusic.Play();
-		} else if (lightLevel > lightThreshold){
-			//fade out then stop music
-			deathMusic.volume -= 0.05f;
-			if(deathMusic.volume == 0)
-				deathMusic.Stop();
-		}
+
 
 		if (health <= 0){
 			//Call player death
@@ -156,15 +141,46 @@ public class playerStatus : GameBehaviour {
 			Die (true);
 		}
 	}
+
+	private void darkRecover(){
+		if (world.camEffects.lightLevel <1){
+			world.camEffects.lightLevel = 1;
+		}
+
+		world.camEffects.vignette1_L += 0.2f;
+		world.camEffects.vignette2_L += 0.2f;
+		health += 0.5f;
+
+
+		//fade out then stop music
+		deathMusic.volume -= 0.05f;
+		if(deathMusic.volume == 0)
+			deathMusic.Stop();
+	}
+
+	private void darkDamage(){
+		world.camEffects.lightLevel-= 0.002f;
+		world.camEffects.vignette1_L -= 0.1f;
+		world.camEffects.vignette2_L -= 0.01f;
+		health -= 2;
+
+		if (!deathMusic.isPlaying) {
+			deathMusic.volume = 1;
+			deathMusic.Play ();
+		}
+	}
 	
 	public void Die(bool immediate){
 		//Call camera fall-over event. After that, call respawn upon player input.
 		//Respawn needs to move player to checkpoint, kill cam effects, and then call Start(); again.
 		health = 0;
 		if(immediate || deathMusic.time > 6.0f){
-			world.player.transform.position = spawnPoint;
+			//world.player.transform.position = spawnPoint;
+			//Call a death menu?
+
 			Application.LoadLevel (Application.loadedLevelName);
 			Start();
 		}
 	}
 }
+
