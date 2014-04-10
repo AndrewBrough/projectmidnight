@@ -103,12 +103,15 @@ public class playerActions : GameBehaviour {
 		}
 		//new running input
 		//hold shift to run
-		if(Input.GetKeyDown(KeyCode.LeftShift)){
-			MakeRun();
-		}
-		if(!Input.GetKeyDown(KeyCode.LeftShift)){
-			StopRun ();
-		}
+//		if(Input.GetKeyDown(KeyCode.LeftShift) && !running){
+//			MakeRun();
+//			print ("RUN");
+//		}
+//		if(!Input.GetKeyDown(KeyCode.LeftShift) && running){
+//			StopRun ();
+//			print ("STOP");
+//		}
+		
 		//run when player presses forward twice quickly, like in Minecraft
 		if(Input.GetKeyDown(KeyCode.W)){
 			if ( forwardCooldown > 0 && forwardCount == 1){
