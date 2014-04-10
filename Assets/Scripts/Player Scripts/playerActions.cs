@@ -12,7 +12,7 @@ public class playerActions : GameBehaviour {
 	public bool running = false;
 	private float defaultFOV;
 	public float defaultSpeed;
-	private float runSpeed = 11.0f;
+	public float runSpeed = 11.0f;
 	private float crouchSpeed = 2.0f;
 	private int forwardCount = 0;//number of button taps for running
 	private float forwardCooldown = 0.5f; //time to check for a second tap to run
@@ -33,7 +33,9 @@ public class playerActions : GameBehaviour {
 			Vector3 newPos = heldObject.transform.position;
 			newPos.y -= 0.2f;
 			Quaternion q = this.transform.rotation;
-			if(heldObject.name == "notepad"){
+			if(heldObject.name == "Notepad"){
+				newPos.y += 0.17f;
+				newPos.x +=0.15f;
 				q *= Quaternion.Euler(0,-90,0);
 			}
 			heldObject.transform.rotation = q;
@@ -67,10 +69,12 @@ public class playerActions : GameBehaviour {
 			{
 //				print ("Dropped: " + heldObject.transform.name);
 				heldObjectProp.held = false;
+				heldObject.rigidbody.isKinematic = false;
 				if(!heldObject.rigidbody.isKinematic){
 					heldObject.rigidbody.velocity = Vector3.zero;
 					heldObject.rigidbody.AddForce(transform.forward*30 + Vector3.up*30);
 				}
+
 				heldObject = null;
 				heldObjectProp = null;
 			} else {
@@ -87,10 +91,10 @@ public class playerActions : GameBehaviour {
 		}
 
 		//input for crouching
-		if(Input.GetKeyDown(KeyCode.LeftShift) && !crouched){
+		if(Input.GetKeyDown(KeyCode.LeftControl) && !crouched){
 			MakeCrouch();
 		}
-		if(!Input.GetKey(KeyCode.LeftShift) && crouched){
+		if(!Input.GetKey(KeyCode.LeftControl) && crouched){
 			//check if anything above player, then stand if able
 			RaycastHit hit = new RaycastHit();
 			Physics.Raycast(world.camera.transform.position, world.camera.transform.up, out hit, 1f);
@@ -98,6 +102,13 @@ public class playerActions : GameBehaviour {
 				StopCrouch();
 		}
 		//new running input
+		//hold shift to run
+		if(Input.GetKeyDown(KeyCode.LeftShift)){
+			MakeRun();
+		}
+		if(!Input.GetKeyDown(KeyCode.LeftShift)){
+			StopRun ();
+		}
 		//run when player presses forward twice quickly, like in Minecraft
 		if(Input.GetKeyDown(KeyCode.W)){
 			if ( forwardCooldown > 0 && forwardCount == 1){

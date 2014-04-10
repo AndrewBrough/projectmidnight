@@ -8,11 +8,15 @@ public class waypointTrigger : GameBehaviour {
 	public enum triggerType {
 		collision=0,
 		click=1,
-		powercell = 2
+		powercell = 2,
+		multiPowerCell = 3,
 	};
 	public triggerType type = triggerType.collision;
 
 	public GameObject nextWaypoint;
+
+	private int count = 0;
+	public int requiredPowerCells = 3;
 
 	void OnTriggerStay (Collider other){
 		if (other.CompareTag("Player")){
@@ -32,6 +36,22 @@ public class waypointTrigger : GameBehaviour {
 					triggered = true;
 				}
 			}
+		}
+		if(count == requiredPowerCells && type == triggerType.multiPowerCell){
+			if(Input.GetMouseButton(0)){
+				triggered = true;
+			}
+		}
+	}
+
+	void OnTriggerEnter(Collider other){
+		if(other.CompareTag("powerCell")){
+			count++;
+		}
+	}
+	void OnTriggerExit(Collider other){
+		if(other.CompareTag("powerCell")){
+			count--;
 		}
 	}
 }
